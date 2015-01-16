@@ -1,0 +1,389 @@
+/*
+Default
+*/
+
+body{
+	background-color: #F5F5F3;
+}
+
+/*Navbar*/
+.navbar label{
+	font-weight: normal;
+	font-size: 11px;
+	color: #fff;
+}
+
+/*Footer*/
+.footer{
+	margin-top: 20px;
+}
+.footer .social{
+
+}
+.footer .social ul{
+	text-align: center;
+	background-color: #0974A0;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+.footer .social ul li{
+	list-style: none;
+	display: inline-block;
+}
+.footer .social ul li a{
+	font-size: 24pt;
+	color: #fff;
+	list-style: none;
+	display: inline-block;
+	padding: 10px;
+	background-color: #01A0C7
+}
+.footer .social ul li a:hover{
+	background-color: #0096BD
+}
+.footer .partner{
+	text-align: center;
+	padding: 15px 0;
+	background-color: #4E3C7A
+}
+.footer-bottom{
+	box-shadow: 0px 15px 0 0 rgba(2,10,95,0.5) inset;
+	height:100px;
+	background-image: url(../img/bgheader.png);
+	background-size: cover;
+}
+
+/*Search Box*/
+.search-box{
+	margin: 0 15px 15px;
+}
+.search-box > .form-group{
+	font-size: 0;
+}
+.search-box .form-control{
+	border-radius: 0;
+	border-right: 0;
+}
+.search-box-btn{
+	border-radius:0 5px 5px 0;
+}
+
+/*File Upload*/
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: #6B55A0;
+	color: #fff;
+	font-weight: bold;
+	line-height: 100px;
+	font-size: 48px;
+	display: inline-block;
+	background-size: cover;
+	border: 1px solid #604B8F;
+}
+.fileUpload.filled span{
+	display: none;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 100px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+/*
+Home
+*/
+
+/*Hero Container*/
+.hero-container{
+	text-align: center;
+	padding: 20px 0;
+}
+.hero-container > .hero-image{
+	width:100%;
+	max-width:1100px;
+}
+
+/*Register Donate Container*/
+.register-donate-container > .menu{
+	height: 150px;
+	padding: 20px;
+	color: #fff;
+}
+.register-donate-container > .menu-left{
+	background-color: #096385;
+}
+.register-donate-container > .menu-right{
+	background-color: #098485;
+}
+.register-donate-container > .menu-right:after{
+	content: "";
+	width: 0; 
+	height: 0; 
+	border-top: 150px solid transparent;
+	border-bottom: 0px solid transparent; 
+
+	border-right:75px solid #098485; 
+
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: -75px;
+}
+
+/*Benefits Container*/
+.benefits-container{
+	background-color: #D2D2D2;
+	padding: 20px;
+	color:#00354A;
+}
+
+/*News Container*/
+.news-container{
+	background-color: #00A8B3;
+	padding: 20px;
+	color:#00354A;
+}
+.news-container ul li{
+	list-style: none;
+	padding: 15px 0;
+	border-bottom: 1px solid #898989;
+	height: auto;
+}
+.news-item-holder{
+	background-color:#FABE46;
+	overflow-y:scroll;
+	overflow-x: hidden;
+	max-height:500px;
+}
+
+/*Institution Register Container*/
+.institution-register-container{
+	background-color: #096385;
+	padding: 20px;
+	color: #fff;
+}
+
+/*
+Register
+*/
+
+/*Expanded List Menu*/
+.expanded-menu ul{
+	padding: 0;
+	margin: 0;
+}
+.expanded-menu li{
+	list-style: none;
+	padding: 10px 100px;
+	text-align: center;
+	border:1px solid #CDCDCD;
+	display: inline-block;
+	font-weight: bold;
+	color: #00A8B3;
+	background-color: #fff;
+}
+.expanded-menu li.active{
+	background-color: #00A8B3;
+	color: #fff;
+}
+
+.expanded-form{
+	text-align: left;
+}
+.expanded-form .col-md-6{
+	padding: 10px;
+}
+
+.expanded-form .form-inline .form-group{
+	padding: 10px;
+}
+
+/*
+Profile
+*/
+
+/*Basic Info*/
+.basic-info-container{
+	background-color: #096385;
+	padding: 20px;
+	color: #fff;
+	background-size: cover;
+}
+
+/*Profile Header*/
+.profile-header{
+	background-image: url("http://lorempixel.com/1600/400/sports");
+	padding: 20px;
+	height: 300px;
+	color: #fff;
+
+	text-align:center;
+	position:relative;
+	margin-bottom:5px;
+}
+
+.profile-header .profile-name{
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.53);
+	position:absolute;
+	bottom:100px;
+	left:0;
+	right:0;
+	margin:0 auto;
+}
+
+.profile-header .profile-image{
+	width: 150px;
+	height: 150px;
+	border-radius:50%;
+	border: 5px solid #fff;
+	position:absolute;
+	bottom:-80px;
+	left:0;
+	right:0;
+	margin: 0 auto;
+}
+
+/*Gallery*/
+.gallery{
+	background-color:#00A8B3;
+	padding: 20px;
+	color:#00354A;
+}
+.items{
+	overflow-y:scroll;
+	overflow-x: hidden;
+	max-height:500px;
+
+	border: 5px solid #FEC144;
+
+}
+.items ul{
+	padding: 0px;
+}
+.items ul li{
+	list-style: none;
+	padding: 15px;
+	border-bottom: 1px solid #898989;
+	height: auto;
+	background-color: #D2D2D2
+}
+.slide-description{
+	background-color:#FFB111;
+	color:#fff;
+	padding:15px;
+	text-align:center;
+}
+.slide-description-title{
+	font-size:24px;
+}
+.slide-description-about{
+	font-size:14px;
+}
+
+/*
+	Book Display
+*/
+.img-holder{
+	width:100%;
+	background-size:cover;
+	height:400px;
+	border:2px solid #D2D2D2;
+	margin-bottom: 10px;
+}
+.img-small-holder{
+	width: 100%;
+	overflow-x:scroll;
+	height: 100px;
+	border: 2px solid #D2D2D2;
+	overflow-x:hidden;
+	margin-bottom:10px;
+}
+.img-small-holder > ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.img-small-holder > ul > li{
+	display: inline-block;
+	padding: 5px;
+}
+.img-small-holder > ul > li > img{
+	width: 80px;
+	height:80px;
+}
+
+.content-phone{
+	font-size:2em;
+	text-align:center;
+	padding:15px;
+	color:#fff;
+}
+
+/*
+	Book Search
+*/
+.category-box{
+	padding: 20px;
+	color:#00354A;
+}
+.items{
+	overflow-y:scroll;
+	overflow-x: hidden;
+	max-height:500px;
+
+	border: 5px solid #FEC144;
+
+}
+.items ul{
+}
+.items ul li{
+	list-style: none;
+	padding: 15px 0;
+	border-bottom: 1px solid #898989;
+	height: auto;
+}
+.boxes{
+	border-radius: 5px;
+	margin: 0 25px;
+	padding: 15px 20px;
+	box-shadow: 0 0 10px 5px rgba(220,220,220,0.2);
+}
+.sub-category li{
+	list-style: none;
+	font-weight: bold;
+}
+.sub-category li a{
+
+	color: #FECA62;
+}
+
+ul.itemsby-menu{
+	padding: 0;
+	margin: 0 0 15px;
+	text-align: center;
+}
+.category-box .itemsby-menu li{
+	list-style: none;
+	padding: 10px 100px;
+	text-align: center;
+	border:1px solid #CDCDCD;
+	display: inline-block;
+	font-weight: bold;
+	color: #FEC144;
+	background-color: #fff;
+}
+.itemsby-menu li.active{
+	background-color: #FEC144;
+	color: #fff;
+}

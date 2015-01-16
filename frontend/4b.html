@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="ROBOTS" CONTENT="INDEX, FOLLOW" />
+
+	<title></title>
+	<!-- <link rel="icon" href="" type="image/x-icon" /> -->
+
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	
+	<!-- Standard CSS -->
+	<link media="all" type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+	<link media="all" type="text/css" rel="stylesheet" href="./css/bootstrap-theme.css">
+	<link media="all" type="text/css" rel="stylesheet" href="./css/font-awesome.css">
+	<link media="all" type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<!-- Docs master nav -->
+	<header class="navbar navbar-default navbar-static-top bs-docs-nav" id="top" role="banner">
+		<div class="container-fluid" style="max-width:1200px">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="" style="padding: 4px 15px"><img src="./img/logo-w.png" height="70" alt="logo"></a>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<div style="padding:15px">
+							<button type="button" class="btn btn-primary btn-xs btn-block">Upload/Pasang Buku</button>
+							<button type="button" class="btn btn-primary btn-xs btn-block">Donasi Buku</button>
+						</div>
+					</li>
+					<li>
+						<div style="padding:15px 0">
+							<button type="button" class="btn btn-default btn-xs btn-block">Beranda</button>
+							<button type="button" class="btn btn-default btn-xs btn-block">Profile</button>
+						</div>
+					</li>
+					<li>
+						<div style="padding:15px 15px;">
+							<img src="http://placehold.it/60x60" style="border-radius:50%;overflow:hidden">
+						</div>
+					</li>
+					<li>
+						<div style="padding:15px 0">
+							<div style="color:#fff;text-align:center;margin-bottom:5px"><strong>Hi! Jundi Wahyudin</strong></div>
+							<a class="btn btn-primary btn-xs" href="./register" style="text-align:center;">Logout</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="container-fluid" style="background-color:#FFF;max-width:1200px;">
+		<div class="row slide hero-container">
+			<div class="col-md-12">
+				<form class="form-inline search-box">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="fa fa-search"></i>
+							</span>
+							<input type="search" class="form-control" id="book" placeholder="Kata Pencarian...">
+						</div>
+						<select class="form-control">
+							<option>Pilih Lokasi</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+						<select class="form-control">
+							<option>Pilih Kategori</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+						<select class="form-control">
+							<option>Pilih Sub-Kategori</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+						<input class="btn btn-primary search-box-btn" type="submit" value="Cari">
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="row slide profile-header">
+			<h1 class="profile-name"><strong>Display Name</strong></h1>
+			<img class="profile-image" src="http://placehold.it/150x150">
+		</div>
+
+		<div class="row slide basic-info-container" style="background-image: url(./img/bgheader.png);">
+			<div class="col-md-offset-3 col-md-3" style="text-align:left">
+				<div>Nama Lengkap: </div>
+				<div>Asal Provinsi: </div>
+				<div>Asal Kota: </div>
+				<div>Nomor Telepon: </div>
+			</div>
+			<div class="col-md-offset-1 col-md-5">
+				<div>Pendidikan: </div>
+				<div>Pin BB: </div>
+				<div>Facebook: </div>
+				<div>Twitter: </div>
+			</div>
+		</div>
+
+		<div class="row slide slide-description">
+			<div class="slide-description-title">Tentang Jundi Wahyudin: </div>
+			<div clsas="slide-description-about">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</div>
+		</div>
+		<div class="row slide gallery">
+			<div class="modal fade" id="advertiseModal" tabindex="-1" role="dialog" aria-labelledby="advertiseModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<form id="statusform" method="post" action="index.php">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="advertiseModalLabel">Ubah Opsi</h4>
+							</div>
+							<div class="modal-body">
+								<p>Nama Buku: <span class="modal-bookname"></span></p>
+								<p>Opsi Status Iklan:
+									<select style='padding:5px;margin:0 0 5px' name="status" id="avertstatus">
+										<option value='show'>Ada</option>
+										<option value='hidden'>Tidak Ada</option>
+										<option value='remove'>Hapus</option>
+									</select>
+								</p>
+								<input type='hidden' name='bookid' id="avertbookid" value="0">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+								<input type="submit" class="btn btn-primary" value="Simpan"></input>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<h2 style="text-align:center">Galeri Toko Buku Jundi Wahyudin</h2>
+			<div class="row items">
+				<ul>
+					<li class="col-md-12">
+						<div class="col-md-1">
+							<img src="http://placehold.it/80x80">
+						</div>
+						<div class="col-md-9">
+							<h5><strong>Judul | Kategori | Sub Kategori | Lokasi Buku</strong></h5>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+						<div class="col-md-2" style="text-align:center">
+							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
+							<div><strong>Status</strong></div>
+							<div>Ada</div>
+							<h5><strong>Harga</strong></h5>
+							<div>Rp 50.000.000</div>
+						</div>
+					</li>
+
+
+					<!-- Dummy -->
+					
+					<li class="col-md-12">
+						<div class="col-md-1">
+							<img src="http://placehold.it/80x80">
+						</div>
+						<div class="col-md-9">
+							<h5><strong>Judul | Kategori | Sub Kategori | Lokasi Buku</strong></h5>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+						<div class="col-md-2" style="text-align:center">
+							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
+							<div><strong>Status</strong></div>
+							<div>Ada</div>
+							<h5><strong>Harga</strong></h5>
+							<div>Rp 50.000.000</div>
+						</div>
+					</li>
+					<li class="col-md-12">
+						<div class="col-md-1">
+							<img src="http://placehold.it/80x80">
+						</div>
+						<div class="col-md-9">
+							<h5><strong>Judul | Kategori | Sub Kategori | Lokasi Buku</strong></h5>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+						<div class="col-md-2" style="text-align:center">
+							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
+							<div><strong>Status</strong></div>
+							<div>Ada</div>
+							<h5><strong>Harga</strong></h5>
+							<div>Rp 50.000.000</div>
+						</div>
+					</li>
+					<li class="col-md-12">
+						<div class="col-md-1">
+							<img src="http://placehold.it/80x80">
+						</div>
+						<div class="col-md-9">
+							<h5><strong>Judul | Kategori | Sub Kategori | Lokasi Buku</strong></h5>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+						<div class="col-md-2" style="text-align:center">
+							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
+							<div><strong>Status</strong></div>
+							<div>Ada</div>
+							<h5><strong>Harga</strong></h5>
+							<div>Rp 50.000.000</div>
+						</div>
+					</li>
+					<li class="col-md-12">
+						<div class="col-md-1">
+							<img src="http://placehold.it/80x80">
+						</div>
+						<div class="col-md-9">
+							<h5><strong>Judul | Kategori | Sub Kategori | Lokasi Buku</strong></h5>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+						<div class="col-md-2" style="text-align:center">
+							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
+							<div><strong>Status</strong></div>
+							<div>Ada</div>
+							<h5><strong>Harga</strong></h5>
+							<div>Rp 50.000.000</div>
+						</div>
+					</li>
+					<li class="col-md-12">
+						<div class="col-md-1">
+							<img src="http://placehold.it/80x80">
+						</div>
+						<div class="col-md-9">
+							<h5><strong>Judul | Kategori | Sub Kategori | Lokasi Buku</strong></h5>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+						<div class="col-md-2" style="text-align:center">
+							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
+							<div><strong>Status</strong></div>
+							<div>Ada</div>
+							<h5><strong>Harga</strong></h5>
+							<div>Rp 50.000.000</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="social">
+			<ul>
+				<li><a href=""><i class="fa fa-fw fa-twitter"></i></a></li>
+				<li><a href=""><i class="fa fa-fw fa-facebook"></i></a></li>
+				<li><a href=""><i class="fa fa-fw fa-youtube"></i></a></li>
+				<li><a href=""><i class="fa fa-fw fa-instagram"></i></a></li>
+				<li><a href=""><i class="fa fa-fw fa-google-plus"></i></a></li>
+			</ul>
+		</div>
+		<div class="partner">
+			<img src="http://placehold.it/300x100">
+		</div>
+		<div class="footer-bottom">
+		</div>
+	</div>
+	<a href="#" id="blob" class="btn large primary" rel="popover">hover for popover</a>
+	<script src="./js/jquery-2.1.3.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/bootstrap/popover.js"></script>
+	<script type="text/javascript">
+	// Submit with ajax
+	$("#statusform").submit(function(event){
+		event.preventDefault();
+		var $form = $(this), url = $form.attr('action');
+		
+		var posting = $.post(url,{
+			bookid: $('#avertbookid').val(),
+			status: $('#avertstatus').val()
+		});
+
+		posting.done(function(data){
+			// alert('Berhasil menyimpan');
+			$('#advertiseModal').modal('hide');
+		});
+
+		posting.error(function(data){
+			alert('error');
+			$('#advertiseModal').modal('hide');
+		});
+	});
+
+	$('[data-toggle="popover"]').popover({
+		'trigger': 'click',
+		'placement': 'left',
+		'html' : true, });
+
+	$('#advertiseModal').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget); // Button that triggered the modal
+	  var bookTitle = button.data('booktitle'); // Extract info from data-* attributes
+	  var bookid = button.data('bookid'); // Extract info from data-* attributes
+	  
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this);
+	  modal.find('.modal-bookname').text(bookTitle);
+	  modal.find('#avertbookid').val(bookid);
+	})
+	</script>
+</body>
+</html>
