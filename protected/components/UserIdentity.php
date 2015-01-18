@@ -17,17 +17,42 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
+		$record = User::model()->findByAttributes(array('email'=>$this->username));
+		if($record === null){
+			if ($this->username === 'admin' && $this->password === 'admin') {
+					$this->setState('roles', 'admin');       
+					Yii::app()->session['user'] = 'admin';
+				    Yii::app()->session['role'] = 'admin';
+				    Yii::app()->session['id'] = 0;
+					$this->errorCode=self::ERROR_NONE;
+			}else{
+				$this->errorCode=self::ERROR_USERNAME_INVALID;
+			}
+		}
+		elseif($record->password !== md5($this->password.'86mU_&6@GCtMwY*PdpLNDW^jRZV@73Ac'))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
+		else{
+			/*$role = $record->tipe;
+		    switch ($role) {
+		        case 1:
+		            $role = 'admin';
+		            break;
+		        case 2: 
+		            $role = 'staff';
+		            break;
+		        case 3:
+		            $role = 'direktur';
+		            break;
+		        case 4:
+		            $role = 'donatur';
+		            break;
+		    }*/
+			$this->setState('roles', 'user');       
+			Yii::app()->session['user'] = $record->username;
+		    Yii::app()->session['role'] = 'user';
+		    Yii::app()->session['id'] = $record->id;
 			$this->errorCode=self::ERROR_NONE;
+		}
 		return !$this->errorCode;
 	}
 }

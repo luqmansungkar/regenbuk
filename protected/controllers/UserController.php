@@ -28,16 +28,16 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','register'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -75,6 +75,30 @@ class UserController extends Controller
 		}
 
 		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionRegister()
+	{
+		$model=new User('create');
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			if ($model->validate()) {
+				$model->password = md5($model->password.'86mU_&6@GCtMwY*PdpLNDW^jRZV@73Ac');
+				//use false as parameter because already validated above
+				if($model->save(false)) //no validation
+					$this->redirect(array('view','id'=>$model->id));
+			}
+			
+		}
+
+		$this->render('register',array(
 			'model'=>$model,
 		));
 	}

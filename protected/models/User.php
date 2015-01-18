@@ -21,6 +21,7 @@
  */
 class User extends CActiveRecord
 {
+	public $cpassword;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -37,7 +38,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, username, email, password, provinsi, kota, telepon', 'required'),
+			array('nama, username, email, password, provinsi, kota, telepon, cpassword', 'required','message'=>'{attribute} tidak boleh kosong'),
 			array('provinsi, kota', 'numerical', 'integerOnly'=>true),
 			array('nama, username, email', 'length', 'max'=>30),
 			array('password', 'length', 'max'=>255),
@@ -46,6 +47,7 @@ class User extends CActiveRecord
 			array('bb', 'length', 'max'=>10),
 			array('fb, twitter, ig', 'length', 'max'=>100),
 			array('bio', 'safe'),
+			array('cpassword','compare','compareAttribute'=>'password','message'=>'Password tidak sama','on'=>'create'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama, username, email, password, provinsi, kota, telepon, pendidikan, bb, fb, twitter, ig, bio', 'safe', 'on'=>'search'),
@@ -83,6 +85,7 @@ class User extends CActiveRecord
 			'twitter' => 'Twitter',
 			'ig' => 'Ig',
 			'bio' => 'Bio',
+			'cpassword'=>'Konfirmasi Password',
 		);
 	}
 
