@@ -28,12 +28,12 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','DynamicCategories','Dynamiccities'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'actions'=>array('buat'),
+				'roles'=>array('user','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -51,8 +51,14 @@ class PostController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+		$model = $this->loadModel($id);
+		$model->provinsi = Provinsi::model()->findByPk($model->provinsi)->nama;
+		$model->kota = Kota::model()->findByPk($model->kota)->nama;
+		$model->kategori = kategori::model()->findByPk($model->kategori)->nama;
+		$model->sub_kategori = SubKategori::model()->findByPk($model->sub_kategori)->nama;
+		$user = User::model()->findByPk($model->id_user);
+		$this->render('lihat',array(
+			'model'=>$model,'user'=>$user,
 		));
 	}
 
@@ -79,6 +85,84 @@ class PostController extends Controller
 		));
 	}
 
+	public function actionBuat()
+	{
+		$model=new Post;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Post']))
+		{
+			$model->attributes=$_POST['Post'];
+			$uploadedFile1=CUploadedFile::getInstance($model,'foto1');
+			$uploadedFile2=CUploadedFile::getInstance($model,'foto2');
+			$uploadedFile3=CUploadedFile::getInstance($model,'foto3');
+
+			$temp = "";
+			if (!empty($uploadedFile1)) {
+				$namaFile1 = rand(0,99999)."-".$uploadedFile1;
+				$temp .= $namaFile1.";";
+			}
+			if (!empty($uploadedFile2)) {
+				$namaFile2 = rand(0,99999)."-".$uploadedFile2;
+				$temp .= $namaFile2.";";
+
+			}
+			if (!empty($uploadedFile3)) {
+				$namaFile3 = rand(0,99999)."-".$uploadedFile3;
+				$temp .= $namaFile3.";";
+
+			}
+
+			$model->foto= $temp;
+			$model->id_user = Yii::app()->session['id'];
+			if($model->save()){
+				if (!empty($uploadedFile1)) {
+					$uploadedFile1->saveAs(Yii::app()->basePath.'/../images/post/'.$namaFile1);
+				}
+				if (!empty($uploadedFile2)) {
+					$uploadedFile2->saveAs(Yii::app()->basePath.'/../images/post/'.$namaFile2);
+
+				}
+				if (!empty($uploadedFile3)) {
+					$uploadedFile3->saveAs(Yii::app()->basePath.'/../images/post/'.$namaFile3);
+
+				}
+				$this->redirect(array('view','id'=>$model->id));
+			}
+		}
+
+		$this->render('buat',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionDynamicCategories()
+	{
+	    $data=SubKategori::model()->findAll('id_kategori=:idKategori', 
+	                  array(':idKategori'=>(int) $_POST['Post']['kategori']));
+	 
+	    $data=CHtml::listData($data,'id','nama');
+	    foreach($data as $value=>$name)
+	    {
+	        echo CHtml::tag('option',
+	                   array('value'=>$value),CHtml::encode($name),true);
+	    }
+	}
+
+	public function actionDynamiccities()
+	{
+	    $data=Kota::model()->findAll('id_provinsi=:idProv', 
+	                  array(':idProv'=>(int) $_POST['Post']['provinsi']));
+	 
+	    $data=CHtml::listData($data,'id','nama');
+	    foreach($data as $value=>$name)
+	    {
+	        echo CHtml::tag('option',
+	                   array('value'=>$value),CHtml::encode($name),true);
+	    }
+	}
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

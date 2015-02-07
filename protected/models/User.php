@@ -41,16 +41,18 @@ class User extends CActiveRecord
 			array('nama, username, email, password, provinsi, kota, telepon, cpassword', 'required','message'=>'{attribute} tidak boleh kosong'),
 			array('provinsi, kota', 'numerical', 'integerOnly'=>true),
 			array('nama, username, email', 'length', 'max'=>30),
-			array('password', 'length', 'max'=>255),
+			array('password, foto, alamat', 'length', 'max'=>255),
 			array('telepon', 'length', 'max'=>15),
 			array('pendidikan', 'length', 'max'=>20),
 			array('bb', 'length', 'max'=>10),
 			array('fb, twitter, ig', 'length', 'max'=>100),
 			array('bio', 'safe'),
+			array('foto','file','types'=>'jpg, gif, png, jpeg','allowEmpty'=>true),
+			array('email','unique', 'message'=>'Email sudah terdaftar.'),
 			array('cpassword','compare','compareAttribute'=>'password','message'=>'Password tidak sama','on'=>'create'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, username, email, password, provinsi, kota, telepon, pendidikan, bb, fb, twitter, ig, bio', 'safe', 'on'=>'search'),
+			array('id, nama, username, email, password, provinsi, kota, telepon, pendidikan, bb, fb, twitter, ig, bio, foto, alamat', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -86,6 +88,8 @@ class User extends CActiveRecord
 			'ig' => 'Ig',
 			'bio' => 'Bio',
 			'cpassword'=>'Konfirmasi Password',
+			'foto'=>'Foto',
+			'alamat'=>'Alamat',
 		);
 	}
 

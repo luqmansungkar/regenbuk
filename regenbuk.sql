@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2015 at 01:52 AM
+-- Generation Time: Feb 07, 2015 at 05:23 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -592,6 +592,7 @@ INSERT INTO `kota` (`id`, `nama`, `id_provinsi`) VALUES
 
 CREATE TABLE IF NOT EXISTS `post` (
 `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `judul` varchar(50) NOT NULL,
   `harga` varchar(20) NOT NULL,
   `konten` longtext NOT NULL,
@@ -600,7 +601,15 @@ CREATE TABLE IF NOT EXISTS `post` (
   `kota` int(11) NOT NULL,
   `kategori` int(11) NOT NULL,
   `sub_kategori` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id`, `id_user`, `judul`, `harga`, `konten`, `foto`, `provinsi`, `kota`, `kategori`, `sub_kategori`) VALUES
+(17, 2, 'Dongeng anak gaul', '230000', 'Buku anak anak gaul keren', '6881-CONGRADUATIONS.png;1843-IMG-20150119-00096.jpg;', 8, 138, 2, 7),
+(18, 2, 'Belajar Sholat', '500000', 'Buat belajar cara-cara sholat', '7528-AM.png;', 12, 161, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -811,15 +820,18 @@ CREATE TABLE IF NOT EXISTS `user` (
   `fb` varchar(100) DEFAULT NULL,
   `twitter` varchar(100) DEFAULT NULL,
   `ig` varchar(100) DEFAULT NULL,
-  `bio` longtext
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `bio` longtext,
+  `foto` varchar(255) DEFAULT NULL,
+  `alamat` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `nama`, `username`, `email`, `password`, `provinsi`, `kota`, `telepon`, `pendidikan`, `bb`, `fb`, `twitter`, `ig`, `bio`) VALUES
-(2, 'Luqman', 'loekmansungkar', 'aa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 1, 1, '123456789', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `user` (`id`, `nama`, `username`, `email`, `password`, `provinsi`, `kota`, `telepon`, `pendidikan`, `bb`, `fb`, `twitter`, `ig`, `bio`, `foto`, `alamat`) VALUES
+(2, 'Luqman', 'loekmansungkar', 'aa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 1, 1, '123456789', 'SMA', NULL, 'Luqman Sungkar', '@LuqmanSungkar', '-', 'keren', '44839-pp-auricular6.png', 'bekasi'),
+(5, 'luqman', 'luqman', 'aaa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 4, 76, '123123123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -879,7 +891,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=507;
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `provinsi`
 --
@@ -894,7 +906,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=121;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

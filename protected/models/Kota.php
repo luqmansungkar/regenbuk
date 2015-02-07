@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'kota':
  * @property integer $id
  * @property string $nama
+ * @property integer $id_provinsi
  */
 class Kota extends CActiveRecord
 {
@@ -25,11 +26,12 @@ class Kota extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama', 'required'),
+			array('nama, id_provinsi', 'required'),
+			array('id_provinsi', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama', 'safe', 'on'=>'search'),
+			array('id, nama, id_provinsi', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +54,7 @@ class Kota extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nama' => 'Nama',
+			'id_provinsi' => 'Id Provinsi',
 		);
 	}
 
@@ -75,6 +78,7 @@ class Kota extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('id_provinsi',$this->id_provinsi);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

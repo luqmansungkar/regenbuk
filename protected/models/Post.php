@@ -19,6 +19,8 @@ class Post extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+
+	public $foto1, $foto2, $foto3;
 	public function tableName()
 	{
 		return 'post';
@@ -32,13 +34,14 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('judul, harga, konten, foto, provinsi, kota, kategori, sub_kategori', 'required'),
+			array('judul, harga, konten, foto, provinsi, kota, kategori, sub_kategori, id_user', 'required'),
 			array('provinsi, kota, kategori, sub_kategori', 'numerical', 'integerOnly'=>true),
 			array('judul', 'length', 'max'=>50),
 			array('harga', 'length', 'max'=>20),
+			array('foto1, foto2, foto3','file','types'=>'jpg, gif, png, jpeg','allowEmpty'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, judul, harga, konten, foto, provinsi, kota, kategori, sub_kategori', 'safe', 'on'=>'search'),
+			array('id, judul, harga, konten, foto, provinsi, kota, kategori, sub_kategori, id_user', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +71,10 @@ class Post extends CActiveRecord
 			'kota' => 'Kota',
 			'kategori' => 'Kategori',
 			'sub_kategori' => 'Sub Kategori',
+			'foto1'=>'Foto 1',
+			'foto2'=>'Foto 2',
+			'foto3'=>'Foto 3',
+			'id_user'=>'ID User',
 		);
 	}
 

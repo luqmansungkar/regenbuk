@@ -119,6 +119,8 @@ Home
 	height: 150px;
 	padding: 20px;
 	color: #fff;
+	background-image: url("../img/background_transparent.png");
+	background-size: cover;
 }
 .register-donate-container > .menu-left{
 	background-color: #096385;
@@ -315,6 +317,7 @@ Profile
 	padding:0;
 }
 .img-small-holder > ul > li{
+	cursor: pointer;
 	display: inline-block;
 	padding: 5px;
 }

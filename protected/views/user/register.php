@@ -4,6 +4,11 @@
 				<?php $this->widget('SearchWidget'); ?>	
 				<br>
 
+				<?php if(Yii::app()->user->hasFlash('terdaftar')){ ?>
+						<div class="alert alert-success" style="color: green">
+							<?php echo Yii::app()->user->getFlash('terdaftar'); ?>
+						</div>
+					<?php } else { ?>
 				<div class="row">
 					<ul class="expanded-menu">
 						<li class="active">Registrasi</li>
@@ -25,37 +30,54 @@
 								// See class documentation of CActiveForm for details on this.
 								'enableAjaxValidation'=>false,
 							)); ?>
-								<?php echo $form->errorSummary($model); ?>
+								<?php if($form->errorSummary($model) != ''){ ?>
+								<div class="alert alert-danger alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $form->errorSummary($model,'Tolong perbaiki kesalahan berikut:'); ?>
+								</div>
+								<?php } ?>
 								<div class="col-md-6">
-									<?php echo $form->textField($model,'nama',array('size'=>30,'maxlength'=>30,'class'=>'form-control','placeholder'=>'Nama Lengkap')); ?>
+									<?php echo $form->textField($model,'nama',array('size'=>30,'maxlength'=>30,'class'=>'form-control','placeholder'=>'Nama Lengkap','required'=>'true')); ?>
 									<?php //echo $form->error($model,'nama'); ?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255,'class'=>'form-control','placeholder'=>'Password')); ?>
+									<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255,'class'=>'form-control','placeholder'=>'Password','required'=>'true')); ?>
 									<?php //echo $form->error($model,'password'); ?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->textField($model,'username',array('size'=>30,'maxlength'=>30,'class'=>'form-control','placeholder'=>'Nama Tampilan (Profile)')); ?>
+									<?php echo $form->textField($model,'username',array('size'=>30,'maxlength'=>30,'class'=>'form-control','placeholder'=>'Nama Tampilan (Profile)','required'=>'true')); ?>
 									<?php //echo $form->error($model,'username'); ?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->passwordField($model,'cpassword',array('size'=>60,'maxlength'=>255,'class'=>'form-control','placeholder'=>'Konfirmasi Password')); ?>
+									<?php echo $form->passwordField($model,'cpassword',array('size'=>60,'maxlength'=>255,'class'=>'form-control','placeholder'=>'Konfirmasi Password','required'=>'true')); ?>
 									<?php //echo $form->error($model,'cpassword'); ?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>30,'class'=>'form-control','placeholder'=>'Email')); ?>
+									<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>30,'class'=>'form-control','placeholder'=>'Email','required'=>'true')); ?>
 									<?php //echo $form->error($model,'email'); ?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->textField($model,'telepon',array('size'=>15,'maxlength'=>15,'class'=>'form-control','placeholder'=>'Nomor Telepon')); ?>
+									<?php echo $form->numberField($model,'telepon',array('size'=>15,'maxlength'=>15,'class'=>'form-control','placeholder'=>'Nomor Telepon','required'=>'true')); ?>
 									<?php //echo $form->error($model,'telepon'); ?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->textField($model,'provinsi',array('class'=>'form-control','placeholder'=>'Asal Provinsi')); ?>
+									<?php //echo $form->dropDownList($model,'provinsi',CHtml::listData(Provinsi::model()->findAll(),'id','nama'), array('class'=>'form-control','placeholder'=>'Asal Provinsi','required'=>'true')); ?>
 									<?php //echo $form->error($model,'provinsi'); ?>
+									<?php 
+										echo CHtml::dropDownList('User[provinsi]','', CHtml::listData(Provinsi::model()->findAll(),'id','nama'),
+										array('class'=>'form-control','placeholder'=>'Asal Provinsi','required'=>'true',
+										'ajax' => array(
+										'type'=>'POST', //request type
+										'url'=>CController::createUrl('user/dynamiccities'), //url to call.
+										//Style: CController::createUrl('currentController/methodToCall')
+										'update'=>'#User_kota', //selector to update
+										//'data'=>'js:javascript statement' 
+										//leave out the data key to pass all form values through
+										))); 
+									?>
 								</div>
 								<div class="col-md-6">
-									<?php echo $form->textField($model,'kota',array('class'=>'form-control','placeholder'=>'Asal Kota')); ?>
+									<?php echo $form->dropDownList($model,'kota',array(),array('prompt'=>'Pilih provinsi terlebih dahulu','class'=>'form-control','placeholder'=>'Asal Kota','required'=>'true')); ?>
 									<?php //echo $form->error($model,'kota'); ?>
 								</div>
 								<?php echo CHtml::submitButton('Daftar', array(
@@ -63,7 +85,9 @@
 							<?php $this->endWidget(); ?>
 						</div>
 					</div>
+					
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

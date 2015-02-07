@@ -8,7 +8,7 @@
 		<div class="row register-donate-container">
 			<div class="col-md-6 menu menu-left">
 				<div class="col-md-5" style="text-align:right">
-					<img src="http://placehold.it/100x100">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_bulb.png"  height="100" width="100">
 				</div>
 				<div class="col-md-7">
 					<h3 style="margin-top:0">Gratis! Pasang dan Jual</h3>
@@ -17,10 +17,10 @@
 				</div>
 			</div>
 			<div class="col-md-6 menu menu-right">
-				<div class="col-md-5" style="text-align:right">
-					<img src="http://placehold.it/100x100">
+				<div class="col-md-4" style="text-align:right">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_news.png" height="100" width="100">
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<h3 style="margin-top:0">Ayo ikut memberi perubahan</h3>
 					<h4>donasikan buku bekas kamu di sini.</h4>
 					<span class="btn btn-primary">Berdonasi</span>
@@ -30,7 +30,7 @@
 
 		<div class="row slide benefits-container">
 			<div class="col-md-3" style="text-align:left">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-b.png" height="70" alt="logo"><br><br>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_middle.png" height="70" alt="logo"><br><br>
 				<p><strong>regenerasibuku.com</strong> adalah situs jual beli buku bekas secara online. Memberikan kemudahan dan solusi bagi kamu untuk menjual dan mencari buku bekas melalui situs website di www.regenerasibuku.com</p>
 			</div>
 			<div class="col-md-9" style="">
@@ -38,7 +38,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="col-md-4">
-							<img src="http://placehold.it/80x80">
+							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_regen.png" height="80" width="80">
 						</div>
 						<div class="col-md-8">
 							Situs jual beli buku bekas pertama di Indonesia yang melibatkan pengunjung untuk dapat merasakan pengalaman berniaga buku bekas secara online.
@@ -46,7 +46,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="col-md-4">
-							<img src="http://placehold.it/80x80">
+							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_docs.png" height="80" width="80">
 						</div>
 						<div class="col-md-8">
 							Fitur website yang bersahabat memberikan kemudahan bagi semua kalangan untuk dapat berniaga buku bekas di regenerasibuku.com
@@ -54,7 +54,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="col-md-4">
-							<img src="http://placehold.it/80x80">
+							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_people.png" height="80" width="80">
 						</div>
 						<div class="col-md-8">
 							Memberi kemudahan dalam mencari dan mengakses referensi buku bekas.
@@ -132,7 +132,7 @@
 		<div class="row slide institution-register-container">
 			<div class="col-md-6">
 				<div class="col-md-6" style="text-align:right">
-					<img src="http://placehold.it/100x100">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_maps.png" height="100" width="100">
 				</div>
 				<div class="col-md-6">
 					<p>Daftarkan sekolah, lembaga, komunitas, organisasi, atau projek sosial kamu untuk menjadi penerima donasi.</p>
@@ -140,7 +140,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-3" style="text-align:right">
-					<img src="http://placehold.it/100x100">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_docs.png" height="100" width="100">
 				</div>
 				<div class="col-md-6">
 					<p><strong>Caranya Mudah!</strong><br />

@@ -32,14 +32,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="" style="padding: 4px 15px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo-w.png" height="70" alt="logo"></a>
+				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>" style="padding: 4px 15px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_header.png" height="70" alt="logo"></a>
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 				<?php if (Yii::app()->session['role'] == null) { ?>			
 				<ul class="nav navbar-nav navbar-right">
 					<li class="" >
-						<a href="./register" style="text-align:center;">
-							<div style="margin-bottom:5px"><img src="http://placehold.it/30x30"></div>
+						<a href="<?php echo Yii::app()->request->baseUrl; ?>" style="text-align:center;">
+							<div style="margin-bottom:5px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_home.png"  height="30" width="30"></div>
 							<span class="btn btn-primary btn-xs">Beranda</span>
 						</a>
 					</li>
@@ -47,8 +47,8 @@
 						<?php $this->widget('LoginWidget'); ?>
 					</li>
 					<li class="" >
-						<a href="./register" style="text-align:center;">
-							<div style="text-align:center;margin-bottom:5px"><img src="http://placehold.it/30x30"></div>
+						<a href="<?php echo Yii::app()->request->baseUrl; ?>/user/register" style="text-align:center;">
+							<div style="text-align:center;margin-bottom:5px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_person.png" height="30" width="30"></div>
 							<span class="btn btn-primary btn-xs">Daftar</span>
 						</a>
 					</li>
@@ -57,25 +57,34 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 							<div style="padding:15px">
-								<button type="button" class="btn btn-primary btn-xs btn-block">Upload/Pasang Buku</button>
+								<a class="btn btn-primary btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/post/buat">Upload/Pasang Buku</a>
 								<button type="button" class="btn btn-primary btn-xs btn-block">Donasi Buku</button>
 							</div>
 						</li>
 						<li>
 							<div style="padding:15px 0">
-								<button type="button" class="btn btn-default btn-xs btn-block">Beranda</button>
-								<button type="button" class="btn btn-default btn-xs btn-block">Profile</button>
+								<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>" >Beranda</a>
+								<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Profile</a>
 							</div>
 						</li>
 						<li>
 							<div style="padding:15px 15px;">
-								<img src="http://placehold.it/60x60" style="border-radius:50%;overflow:hidden">
+								<?php 
+									$model = User::model()->findByPK(Yii::app()->session['id']);
+								?>
+								<img src="<?php 
+									if (empty($model->foto)) {
+										echo "http://placehold.it/60x60";
+									}else{
+										echo Yii::app()->request->baseUrl."/images/user/".$model->foto;
+									}
+								?>" style="border-radius:50%;overflow:hidden;width:60px;height:60px">
 							</div>
 						</li>
 						<li>
 							<div style="padding:15px 0">
 								<div style="color:#fff;text-align:center;margin-bottom:5px"><strong>Hi! <?php echo Yii::app()->session['user'] ?></strong></div>
-								<a class="btn btn-primary btn-xs" href="index.php/site/logout" style="text-align:center;">Logout</a>
+								<a class="btn btn-primary btn-xs" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/logout" style="text-align:center;">Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -97,7 +106,7 @@
 				</ul>
 			</div>
 			<div class="partner">
-				<img src="http://placehold.it/300x100">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_footer.png" height="100">
 			</div>
 			<div class="footer-bottom">
 			</div>

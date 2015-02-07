@@ -427,3 +427,1567 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/regenbuk/index.php/user/edit
 ---
+2015/02/01 06:25:53 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "hasErrors".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\regenbuk\protected\views\user\register.php(28): CComponent->__call('hasErrors', Array)
+#1 C:\xampp\htdocs\regenbuk\protected\views\user\register.php(28): CActiveForm->hasErrors()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#6 C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php(103): CController->render('register', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionRegister()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/register')
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/regenbuk/index.php/user/register
+---
+2015/02/01 06:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index.php/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/index.php/site/logout
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/register
+---
+2015/02/03 10:33:42 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:2352)
+Stack trace:
+#0 C:\xampp\htdocs\regenbuk\protected\views\user\register.php(71): dropDownList()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#5 C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php(103): UserController->render()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionRegister()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/register
+in C:\xampp\htdocs\regenbuk\protected\views\user\register.php (71)
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (103)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/03 10:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "currentController/dynamiccities".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('currentControll...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/index.php/currentController/dynamiccities
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/register
+---
+2015/02/03 11:30:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('dynamiccities')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/dynamiccit...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/register
+---
+2015/02/03 11:31:47 [error] [php] Undefined index: User[provinsi] (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:26:23 [error] [php] Undefined index: User[provinsi] (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:26:47 [error] [php] Undefined index: User[provinsi] (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:27:07 [error] [php] Undefined index: User[provinsi] (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:31:55 [error] [php] Undefined index: User[provinsi] (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:61)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (61)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:46:01 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:49:48 [error] [php] Array to string conversion (C:\xampp\htdocs\regenbuk\protected\controllers\SiteController.php:93)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/site/login
+in C:\xampp\htdocs\regenbuk\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 05:56:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/regenbuk/index.php/user/create
+---
+2015/02/04 07:16:32 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:133) (C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:860)
+Stack trace:
+#0 C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php(135): UserController->redirect()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionProfile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/index.php/user/profile
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (135)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/04 07:26:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('profile')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/profile
+---
+2015/02/04 10:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:03:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/img/bghead...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/img/bgheader.png
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:04:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:04:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:06:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:06:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:07:00 [error] [exception.CException] exception 'CException' with message 'Property "User.Provinsi" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('Provinsi')
+#1 C:\xampp\htdocs\regenbuk\protected\views\user\profile.php(17): CActiveRecord->__get('Provinsi')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('Profile', Array, true)
+#6 C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php(148): CController->render('Profile', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionProfile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile')
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/regenbuk/index.php/user/profile
+---
+2015/02/04 10:07:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:07:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:07:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:07:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:10:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:10:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:13:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:13:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:15:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:15:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/index.php/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/index.php/user/profile
+---
+2015/02/04 10:24:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:24:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/6.book.donate.html
+---
+2015/02/04 10:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/5.book.upload.html
+---
+2015/02/04 10:25:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/7.donate.complete.html
+---
+2015/02/04 10:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:30:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/register
+HTTP_REFERER=http://localhost/regenbuk/
+---
+2015/02/04 10:30:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/register
+HTTP_REFERER=http://localhost/regenbuk/register
+---
+2015/02/04 10:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/register
+HTTP_REFERER=http://localhost/regenbuk/register
+---
+2015/02/04 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/register
+HTTP_REFERER=http://localhost/regenbuk/
+---
+2015/02/04 10:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/register
+HTTP_REFERER=http://localhost/regenbuk/register
+---
+2015/02/04 10:30:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "register".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/register
+HTTP_REFERER=http://localhost/regenbuk/register
+---
+2015/02/04 10:34:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:34:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:40:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:40:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/04 10:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/05 12:13:48 [error] [php] session_regenerate_id(): Session object destruction failed (C:\xampp\htdocs\yii\framework\web\CHttpSession.php:182)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(233): WebUser->changeIdentity()
+#1 C:\xampp\htdocs\regenbuk\protected\models\LoginForm.php(71): WebUser->login()
+#2 C:\xampp\htdocs\regenbuk\protected\controllers\SiteController.php(94): LoginForm->login()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/site/login
+in C:\xampp\htdocs\regenbuk\protected\models\LoginForm.php (71)
+in C:\xampp\htdocs\regenbuk\protected\controllers\SiteController.php (94)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 12:17:33 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 12:17:34 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 12:17:36 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 12:57:58 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 12:58:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_kategori' in 'where clause'. The SQL statement executed was: SELECT * FROM `kota` `t` WHERE id_kategori=:idKategori.
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (104)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 12:58:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_kategori' in 'where clause'. The SQL statement executed was: SELECT * FROM `kota` `t` WHERE id_kategori=:idKategori' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php(104): CActiveRecord->findAll('id_kategori=:id...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PostController->actionDynamicCategories()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('dynamiccategori...')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/dynamiccat...')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/regenbuk/post/dynamiccategories
+HTTP_REFERER=http://localhost/regenbuk/post/buat
+---
+2015/02/05 13:07:14 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:07:26 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:08:30 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:08:34 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (52)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:08:52 [error] [php] Undefined index: User (C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php:117)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/post/dynamiccities
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (117)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:11:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/5.book.upload.html
+---
+2015/02/05 13:11:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/8.book.preview.html
+---
+2015/02/05 13:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/9.book.search.html
+---
+2015/02/05 13:37:00 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:37:00 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:37:00 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:38:10 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:38:10 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:38:10 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:40:13 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:40:13 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:40:13 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:41:14 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:41:14 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:41:14 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:42:08 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:42:08 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:42:08 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:01 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:01 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:01 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:10 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:10 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:43 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/05 13:43:43 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/06 13:33:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/06 13:33:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/06 13:34:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ubahprofile".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('ubahprofile')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahprofile')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/ubahprofil...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/ubahprofile
+---
+2015/02/06 13:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ubahprofile".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('ubahprofile')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahprofile')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/ubahprofil...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/ubahprofile
+---
+2015/02/07 14:40:59 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:40:59 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:45:14 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:45:14 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:47:09 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:47:09 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:52:30 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:52:30 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:52:30 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:53:16 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:53:16 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:53:16 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:54:08 [warning] [application] Failed to set unsafe attribute "foto1" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:54:08 [warning] [application] Failed to set unsafe attribute "foto2" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:54:08 [warning] [application] Failed to set unsafe attribute "foto3" of "Post".
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (91)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 14:55:15 [error] [exception.CException] exception 'CException' with message 'Property "Post.foto1" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('foto1', '')
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(472): CActiveRecord->__set('foto1', '')
+#2 C:\xampp\htdocs\yii\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('attributes', Array)
+#4 C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php(91): CActiveRecord->__set('attributes', Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PostController->actionBuat()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('buat')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/buat')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/regenbuk/post/buat
+HTTP_REFERER=http://localhost/regenbuk/post/buat
+---
+2015/02/07 15:01:31 [error] [php] Undefined variable: temp (C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php:110)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PostController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): PostController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PostController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/post/buat
+in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (110)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 15:22:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "po".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('po')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('po')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/po')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/post/po
+---
+2015/02/07 15:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/img/logo-w.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/img/lo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/frontend/img/logo-w.png
+HTTP_REFERER=http://localhost/regenbuk/frontend/8.book.preview.html
+---
+2015/02/07 15:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/post/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/post/16
+---
+2015/02/07 15:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/post/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/post/16
+---
+2015/02/07 15:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/js/script....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/post/js/script.js
+HTTP_REFERER=http://localhost/regenbuk/post/16
+---
+2015/02/07 16:11:43 [error] [exception.CException] exception 'CException' with message 'Property "User.id_user" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_user')
+#1 C:\xampp\htdocs\regenbuk\protected\views\post\lihat.php(44): CActiveRecord->__get('id_user')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('lihat', Array, true)
+#6 C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php(62): CController->render('lihat', Array)
+#7 [internal function]: PostController->actionView('16')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/regenbuk/post/16
+---
+2015/02/07 16:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:18:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:18:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/2
+---
+2015/02/07 16:21:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/2
+---
+2015/02/07 16:21:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/5
+---
+2015/02/07 16:21:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/5
+---
+2015/02/07 16:21:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/2
+---
+2015/02/07 16:21:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/2
+---
+2015/02/07 16:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:22:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:22:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:25:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php:241
+Stack trace:
+#0 C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php(54): PostController->loadModel('16')
+#1 [internal function]: PostController->actionView('16')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/regenbuk/post/16
+---
+2015/02/07 16:25:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/2
+---
+2015/02/07 16:25:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/2
+---
+2015/02/07 16:36:17 [error] [php] move_uploaded_file(C:\xampp\htdocs\regenbuk\protected/../images/user/15313-pp-IMG-20150119-00096-cropped.jpg): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionEditProfile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/editprofile
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (143)
+in C:\xampp\htdocs\regenbuk\index.php (13)
+2015/02/07 16:37:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/jquery-...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/jquery-2.1.3.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 16:37:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/js/bootstr...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/js/bootstrap.min.js
+HTTP_REFERER=http://localhost/regenbuk/user/profile
+---
+2015/02/07 17:08:13 [error] [php] Object of class Post could not be converted to string (C:\xampp\htdocs\regenbuk\protected\views\user\profile.php:71)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php(160): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionProfile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\regenbuk\index.php(13): CWebApplication->run()
+REQUEST_URI=/regenbuk/user/profile
+in C:\xampp\htdocs\regenbuk\protected\views\user\profile.php (71)
+in C:\xampp\htdocs\regenbuk\protected\controllers\UserController.php (160)
+in C:\xampp\htdocs\regenbuk\index.php (13)
