@@ -17,4 +17,6 @@ $(document).ready(function(){
 	$(".upload").change(function(){
 	    readURL(this,$(this).parent());
 	});
+
+	$('[data-toggle="tooltip"]').tooltip();
 })
