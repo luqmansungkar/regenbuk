@@ -19,4 +19,8 @@ $(document).ready(function(){
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
+
+	$("#btn-show-phone").click(function(){
+		$("#txt-phone").text($("#txt-phone").data("last"));
+	})
 })
