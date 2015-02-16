@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2015 at 05:23 PM
+-- Generation Time: Feb 16, 2015 at 06:49 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,6 +19,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `regenbuk`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donasi`
+--
+
+CREATE TABLE IF NOT EXISTS `donasi` (
+`id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `tujuan` int(11) NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  `kategori` int(11) NOT NULL,
+  `sub_kategori` int(11) NOT NULL,
+  `deskripsi` mediumtext NOT NULL,
+  `pesan` mediumtext NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `donasi`
+--
+
+INSERT INTO `donasi` (`id`, `id_user`, `tujuan`, `jumlah`, `kategori`, `sub_kategori`, `deskripsi`, `pesan`) VALUES
+(1, 2, 1, 5, 1, 3, 'buku belajar fiqih', 'selamat belajar'),
+(2, 2, 1, 5, 1, 3, 'Quran', 'Baca yang rajin ya'),
+(3, 2, 1, 10, 2, 7, 'yeah', 'yeah');
 
 -- --------------------------------------------------------
 
@@ -600,16 +626,18 @@ CREATE TABLE IF NOT EXISTS `post` (
   `provinsi` int(11) NOT NULL,
   `kota` int(11) NOT NULL,
   `kategori` int(11) NOT NULL,
-  `sub_kategori` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+  `sub_kategori` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`id`, `id_user`, `judul`, `harga`, `konten`, `foto`, `provinsi`, `kota`, `kategori`, `sub_kategori`) VALUES
-(17, 2, 'Dongeng anak gaul', '230000', 'Buku anak anak gaul keren', '6881-CONGRADUATIONS.png;1843-IMG-20150119-00096.jpg;', 8, 138, 2, 7),
-(18, 2, 'Belajar Sholat', '500000', 'Buat belajar cara-cara sholat', '7528-AM.png;', 12, 161, 1, 3);
+INSERT INTO `post` (`id`, `id_user`, `judul`, `harga`, `konten`, `foto`, `provinsi`, `kota`, `kategori`, `sub_kategori`, `status`) VALUES
+(17, 2, 'Dongeng anak gaul', '230000', 'Buku anak anak gaul keren', '6881-CONGRADUATIONS.png;1843-IMG-20150119-00096.jpg;', 8, 138, 2, 7, 2),
+(19, 2, 'anak kecil', '120000', 'wahahahahahaha', '66699-AM.png;', 8, 138, 2, 7, 1),
+(20, 5, 'buku seru', '180000', 'wah wah wah', '57888-buttinNaekTurun.png;70989-AM.png;', 11, 154, 6, 35, 1);
 
 -- --------------------------------------------------------
 
@@ -803,6 +831,25 @@ INSERT INTO `sub_kategori` (`id`, `id_kategori`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tujuan_donasi`
+--
+
+CREATE TABLE IF NOT EXISTS `tujuan_donasi` (
+`id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tujuan_donasi`
+--
+
+INSERT INTO `tujuan_donasi` (`id`, `nama`) VALUES
+(1, 'Indonesia Quran Foundation'),
+(2, 'Sekolah Masjid Terminal');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -822,20 +869,29 @@ CREATE TABLE IF NOT EXISTS `user` (
   `ig` varchar(100) DEFAULT NULL,
   `bio` longtext,
   `foto` varchar(255) DEFAULT NULL,
-  `alamat` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `alamat` varchar(255) DEFAULT NULL,
+  `verified` int(11) NOT NULL,
+  `token` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `nama`, `username`, `email`, `password`, `provinsi`, `kota`, `telepon`, `pendidikan`, `bb`, `fb`, `twitter`, `ig`, `bio`, `foto`, `alamat`) VALUES
-(2, 'Luqman', 'loekmansungkar', 'aa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 1, 1, '123456789', 'SMA', NULL, 'Luqman Sungkar', '@LuqmanSungkar', '-', 'keren', '44839-pp-auricular6.png', 'bekasi'),
-(5, 'luqman', 'luqman', 'aaa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 4, 76, '123123123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `user` (`id`, `nama`, `username`, `email`, `password`, `provinsi`, `kota`, `telepon`, `pendidikan`, `bb`, `fb`, `twitter`, `ig`, `bio`, `foto`, `alamat`, `verified`, `token`) VALUES
+(2, 'Luqman', 'loekmansungkar', 'aa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 1, 1, '123123123123', 'SMA', NULL, 'Luqman Sungkar', '@LuqmanSungkar', '-', 'keren', NULL, 'bekasi', 1, ''),
+(5, 'luqman', 'luqman', 'aaa@aa.com', '87a80cf1e0c1a9109b65fc852a209473', 4, 76, '123123123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, ''),
+(6, 'sesuatu', 'sesuatu', 'abc@abc.com', '87a80cf1e0c1a9109b65fc852a209473', 2, 24, '123123123', '', NULL, '', '', '', '', '69003-pp-10906177_1533324396917037_5573782249407365634_n.jpg', '', 0, '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `donasi`
+--
+ALTER TABLE `donasi`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `kategori`
@@ -868,6 +924,12 @@ ALTER TABLE `sub_kategori`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tujuan_donasi`
+--
+ALTER TABLE `tujuan_donasi`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -877,6 +939,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `donasi`
+--
+ALTER TABLE `donasi`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `kategori`
 --
@@ -891,7 +958,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=507;
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `provinsi`
 --
@@ -903,10 +970,15 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
 ALTER TABLE `sub_kategori`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=121;
 --
+-- AUTO_INCREMENT for table `tujuan_donasi`
+--
+ALTER TABLE `tujuan_donasi`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

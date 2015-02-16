@@ -69,7 +69,7 @@ class UserController extends Controller
 					                    "Reply-To: {$emailadmin}\r\n".
 					                    "MIME-Version: 1.0\r\n".
 					                    "Content-type: text/html; charset=UTF-8";
-					mail($model->email,$subject,$setpesan,$headers);
+					mail('loekmansungkar@gmail.com',$subject,$setpesan,$headers);
 					echo "<a href='".$this->createUrl('user/recover',array('t'=>$model->token))."'>Click Here to Reset Password</a>";
 				}
 				Yii::app()->user->setFlash('forgot','1');
