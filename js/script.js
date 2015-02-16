@@ -17,4 +17,10 @@ $(document).ready(function(){
 	$(".upload").change(function(){
 	    readURL(this,$(this).parent());
 	});
+
+	$('[data-toggle="tooltip"]').tooltip();
+
+	$("#btn-show-phone").click(function(){
+		$("#txt-phone").text($("#txt-phone").data("last"));
+	})
 })

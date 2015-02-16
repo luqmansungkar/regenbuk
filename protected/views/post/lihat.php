@@ -38,7 +38,13 @@
 				<div style="background-color:#FEC144;font-size:48px;color:#fff;text-align:center;font-weight:bold;width:110%;margin-left:-5%;"><?php echo 'Rp. ' . number_format( $model->harga, 0 , '' , '.' ) . ',-'; ?></div>
 				<div style="position:relative;height:150px;background-color: #0974A0" >
 					<div class="col-md-2">
-						<img src="http://placehold.it/100x100" style="border-radius:50%;border: 5px solid #fff;position:absolute;bottom:-80px;left:-50px;top:10px;height:100px;height:100px">
+						<img src="<?php 
+						if (empty($user->foto)) {
+							echo "http://placehold.it/100x100";
+						}else{
+							echo Yii::app()->request->baseUrl."/images/user/".$user->foto;
+						}
+					?>" style="border-radius:50%;border: 5px solid #fff;position:absolute;bottom:-80px;left:-50px;top:10px;height:100px;width:100px">
 					</div>
 					<div class="col-md-10" style="color:#fff">
 						<h2><strong><?php echo $user->username; ?></strong></h2>
@@ -46,8 +52,10 @@
 						<p>Temukan banyak koleksi buku pribadi di dalam profilenya.</p>
 					</div>
 				</div>
-				<div class="content-phone"><i class="fa fa-phone"></i> <?php echo $user->telepon; ?>
-					<div class="btn btn-danger btn-sm">Lihat nomor telepon</div></div>
+				<div class="content-phone"><i class="fa fa-phone"></i> <?php 
+				$telp = str_split($user->telepon, 4);
+				echo $telp[0]."-".$telp[1]."-"; ?><span id="txt-phone" data-last="<?php echo $telp[2]; ?>">XXXX</span>
+					<div class="btn btn-danger btn-sm" id="btn-show-phone">Lihat nomor telepon</div></div>
 				<hr />
 				<div style="font-size:2em;text-align:center;padding:15px;color:#fff">
 					<div>Kategori: <?php echo $model->kategori; ?></div>

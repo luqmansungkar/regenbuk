@@ -28,7 +28,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','register','Dynamiccities'),
+				'actions'=>array('index','view','register','Dynamiccities','forgot','recover'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -45,6 +45,60 @@ class UserController extends Controller
 		);
 	}
 
+	public function actionForgot(){
+		if(isset($_POST['emailForgot'])){
+			$email = $_POST['emailForgot'];
+			$model = User::model()->findByAttributes(array('email'=>$email));
+			if (empty($model)) {
+				Yii::app()->user->setFlash('forgot','0');
+			}else{
+				$getToken=rand(0, 99999);
+				$getTime=date("H:i:s");
+				$model->token = md5("!@13!34^".$getToken.$model->id.$getTime);
+				//print_r($model);
+				$model->cpassword = '123';
+				if($model->save()){
+					$namaPengirim="Regenerasi Buku";
+					$emailadmin="admin@regenbuk.com";
+					$subjek="Reset Password";
+					$setpesan="you have successfully reset your password<br/>
+					                    <a href='http://localhost/regenbuk/user/recover?t=".$model->token."'>Click Here to Reset Password</a>";
+					$name='=?UTF-8?B?'.base64_encode($namaPengirim).'?=';
+					$subject='=?UTF-8?B?'.base64_encode($subjek).'?=';
+					$headers="From: $name <{$emailadmin}>\r\n".
+					                    "Reply-To: {$emailadmin}\r\n".
+					                    "MIME-Version: 1.0\r\n".
+					                    "Content-type: text/html; charset=UTF-8";
+					mail($model->email,$subject,$setpesan,$headers);
+					echo "<a href='".$this->createUrl('user/recover',array('t'=>$model->token))."'>Click Here to Reset Password</a>";
+				}
+				Yii::app()->user->setFlash('forgot','1');
+			}
+		}
+		$this->render('forgot');
+	}
+
+	public function actionRecover(){
+		$token = CHttpRequest::getParam('t');
+		if (!empty($token)) {
+			$model = User::model()->findByAttributes(array('token'=>$token));
+			if (!empty($model)) {
+				$this->render('recover', array('token'=>$token));
+			}else{
+				throw new CHttpException(404,'The specified post cannot be found.');
+			}
+		}elseif (isset($_POST['np'])) {
+				$model = User::model()->findByAttributes(array('token'=>$_POST['tok']));
+				$model->password = md5($_POST['np'].'86mU_&6@GCtMwY*PdpLNDW^jRZV@73Ac');
+				$model->cpassword = '123';
+				$model->token = '';
+				if ($model->save()) {
+					$this->redirect(Yii::app()->homeUrl);
+				}
+		}else{
+		throw new CHttpException(404,'The specified post cannot be found.');
+		}
+	}
 
 	public function actionDynamiccities()
 	{
@@ -67,7 +121,8 @@ class UserController extends Controller
 	{
 		$model=$this->loadModel($id);
 		$post = Post::model()->findAllByAttributes(array('id_user'=>$id));
-
+		$model->provinsi = Provinsi::model()->findByPk($model->provinsi)->nama;
+		$model->kota = Kota::model()->findByPk($model->kota)->nama;
 		$this->render('Profile',array(
 			'model'=>$model,'post'=>$post,
 		));
@@ -155,6 +210,8 @@ class UserController extends Controller
 	public function actionProfile(){
 		$model=$this->loadModel(Yii::app()->session['id']);
 		$post = Post::model()->findAllByAttributes(array('id_user'=>Yii::app()->session['id']));
+		$model->provinsi = Provinsi::model()->findByPk($model->provinsi)->nama;
+		$model->kota = Kota::model()->findByPk($model->kota)->nama;
 		$this->render('Profile',array(
 			'model'=>$model,'post'=>$post,
 		));

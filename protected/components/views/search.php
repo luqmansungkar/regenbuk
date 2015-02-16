@@ -1,35 +1,60 @@
-	<form class="form-inline search-box">
+
+<?php 
+	echo CHtml::beginForm(array('post/cari'),'post',array('class'=>'form-inline search-box'));
+?>
+				<?php 
+				$provinsi = Provinsi::model()->findAll();
+				
+				$provArray["sep1"]="Lokasi";
+				$provArray["non-jab"]="Jabodetabek";
+				$provArray["non-jak"]="Jakarta";
+				$provArray["non-bog"]="Bogor";
+				$provArray["non-tan"]="Tangerang";
+				$provArray["non-bek"]="Bekasi";
+				$provArray["non-ban"]="Bandung";
+				$provArray["non-yog"]="Yogyakarta";
+				$provArray["non-sur"]="Surabaya dan Sekitarnya";
+				$provArray["non-med"]="Medan dan Sekitarnya";
+				$provArray["sep2"]="Provinsi";
+
+				$provArray = $provArray + CHtml::listData($provinsi,'id','nama');
+				//print_r($provArray);
+					?>
 					<div class="form-group">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="fa fa-search"></i>
 							</span>
-							<input type="search" class="form-control" id="book" placeholder="Kata Pencarian...">
+							<?php 
+							echo CHtml::textField('cari[judul]','',array('class'=>'form-control','required'=>'true','placeholder'=>'Kata Pencarian...'));?>
 						</div>
-						<select class="form-control">
-							<option>Pilih Lokasi</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-						<select class="form-control">
-							<option>Pilih Kategori</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-						<select class="form-control">
-							<option>Pilih Sub-Kategori</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
+						<?php 
+						echo CHtml::dropDownList('cari[provinsi]','',$provArray,array('prompt'=>'Pilih Lokasi','class'=>'form-control','placeholder'=>'Asal Kota','required'=>'true'));?>
+						<?php 
+							echo CHtml::dropDownList('cari[kategori]','', CHtml::listData(Kategori::model()->findAll(),'id','nama'),
+							array('prompt'=>'Pilih Kategori','class'=>'form-control','placeholder'=>'Kategori','required'=>'true',
+							'ajax' => array(
+							'type'=>'POST', //request type
+							'url'=>Yii::app()->createUrl('post/DynamicCategories'), //url to call.
+							//Style: CController::createUrl('currentController/methodToCall')
+							'update'=>'#cari_sub_kategori', //selector to update
+							//'data'=>'js:javascript statement' 
+							//leave out the data key to pass all form values through
+							))); 
+						?>
+						<?php 
+						echo CHtml::dropDownList('cari[sub_kategori]','',array(),array('prompt'=>'Pilih kategori terlebih dahulu','class'=>'form-control','required'=>'true'));?>
 						<input class="btn btn-primary search-box-btn" type="submit" value="Cari">
 					</div>
-				</form>
+<?php echo CHtml::endForm(); ?>
+
+<script>
+	
+	var semua= document.getElementsByTagName("option");
+	for(var i = 0;i<semua.length;i++){ 
+		if(semua[i].value.indexOf("sep") > -1){
+			semua[i].style.background = "yellow";
+			semua[i].disabled = "true";
+		}
+	}
+</script>

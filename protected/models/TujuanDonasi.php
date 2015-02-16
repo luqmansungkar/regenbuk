@@ -1,30 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "post".
+ * This is the model class for table "tujuan_donasi".
  *
- * The followings are the available columns in table 'post':
+ * The followings are the available columns in table 'tujuan_donasi':
  * @property integer $id
- * @property string $judul
- * @property string $harga
- * @property string $konten
- * @property string $foto
- * @property integer $provinsi
- * @property integer $kota
- * @property integer $kategori
- * @property integer $sub_kategori
- * @property integer $status
+ * @property string $nama
  */
-class Post extends CActiveRecord
+class TujuanDonasi extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-
-	public $foto1, $foto2, $foto3;
 	public function tableName()
 	{
-		return 'post';
+		return 'tujuan_donasi';
 	}
 
 	/**
@@ -35,14 +25,11 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('judul, harga, konten, foto, provinsi, kota, kategori, sub_kategori, id_user', 'required'),
-			array('provinsi, kota, kategori, sub_kategori', 'numerical', 'integerOnly'=>true),
-			array('judul', 'length', 'max'=>50),
-			array('harga', 'length', 'max'=>20),
-			array('foto1, foto2, foto3','file','types'=>'jpg, gif, png, jpeg','allowEmpty'=>true),
+			array('nama', 'required'),
+			array('nama', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, judul, harga, konten, foto, provinsi, kota, kategori, sub_kategori, id_user, status', 'safe', 'on'=>'search'),
+			array('id, nama', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,19 +51,7 @@ class Post extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'judul' => 'Judul',
-			'harga' => 'Harga',
-			'konten' => 'Konten',
-			'foto' => 'Foto',
-			'provinsi' => 'Provinsi',
-			'kota' => 'Kota',
-			'kategori' => 'Kategori',
-			'sub_kategori' => 'Sub Kategori',
-			'foto1'=>'Foto 1',
-			'foto2'=>'Foto 2',
-			'foto3'=>'Foto 3',
-			'id_user'=>'ID User',
-			'status'=>'Status',
+			'nama' => 'Nama',
 		);
 	}
 
@@ -99,15 +74,7 @@ class Post extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('judul',$this->judul,true);
-		$criteria->compare('harga',$this->harga,true);
-		$criteria->compare('konten',$this->konten,true);
-		$criteria->compare('foto',$this->foto,true);
-		$criteria->compare('provinsi',$this->provinsi);
-		$criteria->compare('kota',$this->kota);
-		$criteria->compare('kategori',$this->kategori);
-		$criteria->compare('sub_kategori',$this->sub_kategori);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('nama',$this->nama,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -118,7 +85,7 @@ class Post extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Post the static model class
+	 * @return TujuanDonasi the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

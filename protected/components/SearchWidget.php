@@ -6,6 +6,7 @@ class SearchWidget extends CWidget{
 	}
 
 	public function run(){
-		$this->render('search');
+		$model=new Post();
+		$this->render('search',array('model'=>$model));
 	}
 }

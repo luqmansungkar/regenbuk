@@ -57,8 +57,13 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 							<div style="padding:15px">
+							<?php if (Yii::app()->session['role'] == 'admin') { ?>
+								<a class="btn btn-primary btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/tujuanDonasi/create">Tujuan Donasi</a>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/donasi/buat" class="btn btn-primary btn-xs btn-block">Verifikasi User</a>
+							<?php } else { ?>
 								<a class="btn btn-primary btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/post/buat">Upload/Pasang Buku</a>
-								<button type="button" class="btn btn-primary btn-xs btn-block">Donasi Buku</button>
+								<a href="<?php echo Yii::app()->request->baseUrl; ?>/donasi/buat" class="btn btn-primary btn-xs btn-block">Donasi Buku</a>
+								<?php } ?>
 							</div>
 						</li>
 						<li>

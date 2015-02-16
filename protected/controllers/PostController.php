@@ -28,11 +28,11 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','DynamicCategories','Dynamiccities'),
+				'actions'=>array('index','view','DynamicCategories','Dynamiccities','cari'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('buat'),
+				'actions'=>array('buat','ubah'),
 				'roles'=>array('user','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -43,6 +43,85 @@ class PostController extends Controller
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	public function actionUbah(){
+		
+		if(isset($_POST['ubah']))
+		{
+			$data = $_POST['ubah'];
+			$model=$this->loadModel($data['id']);
+			if ($data['status'] != 'remove') {
+				$model->status = $data['status'];
+				$model->save();
+			}else{
+				$model->delete();
+			}
+			
+		}
+
+		$this->redirect(array('user/profile'));
+	}
+
+	public function actionCari(){
+		$cari=$_POST['cari'];
+		//print_r($cari);
+		$criteria = new CDbCriteria();
+		if ($cari['judul'] == '') {
+			$kondisi = "(";
+		}else{
+			$kondisi = "judul like '%".$cari['judul']."%' and (";
+		}
+
+		if (strpos($cari['provinsi'], 'non') !== FALSE) {
+			$lokasi = explode("-", $cari['provinsi'])[1];
+			//echo "lokasi ".$lokasi;
+			switch ($lokasi) {
+				case 'jab':
+					$kondisi .= "provinsi=11 or kota=161 or kota=162 or kota=179 or kota=180 or kota=183 or kota=224 or kota=227 or kota=228";
+					break;
+				case 'jak':
+					$kondisi .= "provinsi=11";
+					break;
+				case 'bog':
+					$kondisi .= "kota=162 or kota=180";
+					break;
+				case 'tan':
+					$kondisi .= "kota=224 or kota=227 or kota=228";
+					break;
+				case 'bek':
+					$kondisi .= "kota=161 or kota=162";
+					break;
+				case 'ban':
+					$kondisi .= "kota=159 or kota=160 or kota=177";
+					break;
+				case 'yog':
+					$kondisi .= "provinsi=16";
+					break;
+				case 'sur':
+					$kondisi .= "kota=258";
+					break;
+				case 'med':
+					$kondisi .= "kota=49";
+					break;
+				default:
+					# code...
+					break;
+			}
+		}else{
+			$kondisi .= "provinsi=".$cari['provinsi'];
+		}
+
+		$kondisi .= ") and kategori=:kategori and sub_kategori=:sub_kategori";
+		//echo $kondisi;
+		$criteria->condition = $kondisi;
+		$criteria->params = array(':kategori'=>$cari['kategori'], ':sub_kategori'=>$cari['sub_kategori']);
+		$hasil = Post::model()->findAll($criteria);
+		$cari['kategori'] = Kategori::model()->findByPk($cari['kategori'])->nama;
+		$sesuatu = Post::model()->findAll();
+		//print_r($sesuatu);
+		//print_r($hasil);
+		$this->render('cari',array('model'=>$hasil, 'cari'=>$cari));
 	}
 
 	/**
@@ -117,6 +196,7 @@ class PostController extends Controller
 
 			$model->foto= $temp;
 			$model->id_user = Yii::app()->session['id'];
+			$model->status = 1;
 			if($model->save()){
 				if (!empty($uploadedFile1)) {
 					$uploadedFile1->saveAs(Yii::app()->basePath.'/../images/post/'.$namaFile1);
@@ -140,8 +220,14 @@ class PostController extends Controller
 
 	public function actionDynamicCategories()
 	{
-	    $data=SubKategori::model()->findAll('id_kategori=:idKategori', 
-	                  array(':idKategori'=>(int) $_POST['Post']['kategori']));
+		if (!isset($_POST['cari']['kategori'])) {
+			$data=SubKategori::model()->findAll('id_kategori=:idKategori', 
+			              array(':idKategori'=>(int) $_POST['Post']['kategori']));
+		}else{
+			$data=SubKategori::model()->findAll('id_kategori=:idKategori', 
+			              array(':idKategori'=>(int) $_POST['cari']['kategori']));
+		}
+	    
 	 
 	    $data=CHtml::listData($data,'id','nama');
 	    foreach($data as $value=>$name)

@@ -7,7 +7,12 @@
 
 
 	<div class="row slide profile-header">
-		<h1 class="profile-name"><strong><?php echo $model->username; ?></strong></h1>
+		<h1 class="profile-name"><strong><?php echo $model->username; ?></strong> 
+		<?php if ($model->verified == 1) { ?>
+			<span class="verified fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="Verified Account"style="color: #5890FF" />
+		<?php } ?>
+		
+		</h1>
 		<img class="profile-image" src="<?php 
 			if (empty($model->foto)) {
 				echo "http://placehold.it/150x150";
@@ -40,7 +45,7 @@
 		<div class="modal fade" id="advertiseModal" tabindex="-1" role="dialog" aria-labelledby="advertiseModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
-					<form id="statusform" method="post" action="index.php">
+					<form id="statusform" method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/post/ubah">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 							<h4 class="modal-title" id="advertiseModalLabel">Ubah Opsi</h4>
@@ -48,13 +53,13 @@
 						<div class="modal-body">
 							<p>Nama Buku: <span class="modal-bookname"></span></p>
 							<p>Opsi Status Iklan:
-								<select style='padding:5px;margin:0 0 5px' name="status" id="avertstatus">
-									<option value='show'>Ada</option>
-									<option value='hidden'>Tidak Ada</option>
+								<select style='padding:5px;margin:0 0 5px' name="ubah[status]" id="avertstatus">
+									<option value='1'>Ada</option>
+									<option value='2'>Tidak Ada</option>
 									<option value='remove'>Hapus</option>
 								</select>
 							</p>
-							<input type='hidden' name='bookid' id="avertbookid" value="0">
+							<input type='hidden' name='ubah[id]' id="avertbookid" value="0">
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
@@ -84,10 +89,10 @@
 							<a href="'.Yii::app()->request->baseUrl.'/post/'.$temp->id.'"><h5><strong>'.$temp->judul.' | '.$kategori.' | '.$subKategori.' | '.$provinsi.', '.$kota.'</strong></h5></a>
 							<p> '.$temp->konten.'</p>
 						</div>
-						<div class="col-md-2" style="text-align:center">
-							<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="1">Edit Iklan</button>
-							<div><strong>Status</strong></div>
-							<div>Ada</div>
+						<div class="col-md-2" style="text-align:center">';
+					echo ($model->id != Yii::app()->session['id']) ? '' : '<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="'.$temp->id.'">Edit Iklan</button>';		
+					echo '<div><strong>Status</strong></div>
+							<div>'.(($temp->status == 1) ? 'Ada' : 'Tidak Ada').'</div>
 							<h5><strong>Harga</strong></h5>
 							<div>Rp '.number_format( $temp->harga, 0 , '' , '.' ) . ',-' .'</div>
 						</div>
@@ -104,7 +109,7 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 	// Submit with ajax
-	$("#statusform").submit(function(event){
+	/*$("#statusform").submit(function(event){
 		event.preventDefault();
 		var $form = $(this), url = $form.attr('action');
 		
@@ -122,7 +127,7 @@
 			alert('error');
 			$('#advertiseModal').modal('hide');
 		});
-	});
+	});*/
 
 	$('[data-toggle="popover"]').popover({
 		'trigger': 'click',

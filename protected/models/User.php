@@ -18,6 +18,7 @@
  * @property string $twitter
  * @property string $ig
  * @property string $bio
+ * @property string $token
  */
 class User extends CActiveRecord
 {
@@ -42,7 +43,7 @@ class User extends CActiveRecord
 			array('provinsi, kota', 'numerical', 'integerOnly'=>true),
 			array('nama, username, email', 'length', 'max'=>30),
 			array('password, foto, alamat', 'length', 'max'=>255),
-			array('telepon', 'length', 'max'=>15),
+			array('telepon', 'length','min'=>10, 'max'=>15),
 			array('pendidikan', 'length', 'max'=>20),
 			array('bb', 'length', 'max'=>10),
 			array('fb, twitter, ig', 'length', 'max'=>100),
@@ -52,7 +53,7 @@ class User extends CActiveRecord
 			array('cpassword','compare','compareAttribute'=>'password','message'=>'Password tidak sama','on'=>'create'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, username, email, password, provinsi, kota, telepon, pendidikan, bb, fb, twitter, ig, bio, foto, alamat', 'safe', 'on'=>'search'),
+			array('id, nama, username, email, password, provinsi, kota, telepon, pendidikan, bb, fb, twitter, ig, bio, foto, alamat, token', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,6 +91,7 @@ class User extends CActiveRecord
 			'cpassword'=>'Konfirmasi Password',
 			'foto'=>'Foto',
 			'alamat'=>'Alamat',
+			'token'=>'Token',
 		);
 	}
 

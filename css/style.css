@@ -390,3 +390,7 @@ ul.itemsby-menu{
 	background-color: #FEC144;
 	color: #fff;
 }
+
+.verified{
+	cursor: default;
+}
