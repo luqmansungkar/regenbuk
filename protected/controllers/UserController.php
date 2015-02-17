@@ -62,7 +62,7 @@ class UserController extends Controller
 					$emailadmin="admin@regenbuk.com";
 					$subjek="Reset Password";
 					$setpesan="you have successfully reset your password<br/>
-					                    <a href='http://localhost/regenbuk/user/recover?t=".$model->token."'>Click Here to Reset Password</a>";
+					                    <a href='".$this->createUrl('user/recover',array('t'=>$model->token))."'>";
 					$name='=?UTF-8?B?'.base64_encode($namaPengirim).'?=';
 					$subject='=?UTF-8?B?'.base64_encode($subjek).'?=';
 					$headers="From: $name <{$emailadmin}>\r\n".
@@ -79,7 +79,7 @@ class UserController extends Controller
 	}
 
 	public function actionRecover(){
-		$token = CHttpRequest::getParam('t');
+		$token = $_GET['t'];
 		if (!empty($token)) {
 			$model = User::model()->findByAttributes(array('token'=>$token));
 			if (!empty($model)) {
