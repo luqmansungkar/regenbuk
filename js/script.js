@@ -23,4 +23,6 @@ $(document).ready(function(){
 	$("#btn-show-phone").click(function(){
 		$("#txt-phone").text($("#txt-phone").data("last"));
 	})
+	
+	$('.expanded-form').validator();
 })
