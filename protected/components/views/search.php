@@ -2,6 +2,7 @@
 <?php 
 	echo CHtml::beginForm(array('post/cari'),'post',array('class'=>'form-inline search-box'));
 ?>
+<h2 style="color:#00C3C8">Temukan buku yang kamu cari di sini!</h2>
 				<?php 
 				$provinsi = Provinsi::model()->findAll();
 				
@@ -26,7 +27,7 @@
 								<i class="fa fa-search"></i>
 							</span>
 							<?php 
-							echo CHtml::textField('cari[judul]','',array('class'=>'form-control','required'=>'true','placeholder'=>'Kata Pencarian...'));?>
+							echo CHtml::textField('cari[judul]','',array('class'=>'form-control','required'=>'true','placeholder'=>'Cari buku...','style'=>'width:250px'));?>
 						</div>
 						<?php 
 						echo CHtml::dropDownList('cari[provinsi]','',$provArray,array('prompt'=>'Pilih Lokasi','class'=>'form-control','placeholder'=>'Asal Kota','required'=>'true'));?>

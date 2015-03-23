@@ -1,15 +1,14 @@
-<?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="Regenerasi Buku adalah situs jual beli buku bekas secara online. Memberikan kemudahan dan solusi bagi kamu untuk menjual dan mencari buku bekas melalui situs website di www.regenerasibuku.com" />
+	<meta name="keywords" content="regenerasi buku, jual beli buku, beli buku online" />
 	<meta name="ROBOTS" CONTENT="INDEX, FOLLOW" />
 
-	<title>Home</title>
+	<title>Regenerasi Buku</title>
 	<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/icon.png" type="image/x-icon" />
 
 	<!-- Fonts -->
@@ -32,7 +31,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>" style="padding: 4px 15px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_header.png" height="70" alt="logo"></a>
+				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>" style="padding: 4px 15px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_header.png" height="90" alt="logo"></a>
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 				<?php if (Yii::app()->session['role'] == null) { ?>			
@@ -69,7 +68,11 @@
 						<li>
 							<div style="padding:15px 0">
 								<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>" >Beranda</a>
-								<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Profile</a>
+								<?php if (Yii::app()->session['role'] == 'admin') { ?>
+									<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/admin">List User</a>
+								<?php } else { ?>
+									<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Profile</a>
+								<?php } ?>
 							</div>
 						</li>
 						<li>
@@ -121,5 +124,6 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-2.1.3.min.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/validator.min.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2015 at 06:49 AM
+-- Generation Time: Mar 23, 2015 at 01:22 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -34,17 +34,19 @@ CREATE TABLE IF NOT EXISTS `donasi` (
   `kategori` int(11) NOT NULL,
   `sub_kategori` int(11) NOT NULL,
   `deskripsi` mediumtext NOT NULL,
-  `pesan` mediumtext NOT NULL
+  `pesan` mediumtext NOT NULL,
+  `no_surat` varchar(255) NOT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `donasi`
 --
 
-INSERT INTO `donasi` (`id`, `id_user`, `tujuan`, `jumlah`, `kategori`, `sub_kategori`, `deskripsi`, `pesan`) VALUES
-(1, 2, 1, 5, 1, 3, 'buku belajar fiqih', 'selamat belajar'),
-(2, 2, 1, 5, 1, 3, 'Quran', 'Baca yang rajin ya'),
-(3, 2, 1, 10, 2, 7, 'yeah', 'yeah');
+INSERT INTO `donasi` (`id`, `id_user`, `tujuan`, `jumlah`, `kategori`, `sub_kategori`, `deskripsi`, `pesan`, `no_surat`, `tanggal`) VALUES
+(1, 2, 1, 5, 1, 3, 'buku belajar fiqih', 'selamat belajar', '', '2015-02-25 04:47:59'),
+(2, 2, 1, 5, 1, 3, 'Quran', 'Baca yang rajin ya', '', '2015-02-25 04:47:59'),
+(3, 2, 1, 10, 2, 7, 'yeah', 'yeah', '', '2015-02-25 04:47:59');
 
 -- --------------------------------------------------------
 
@@ -836,16 +838,27 @@ INSERT INTO `sub_kategori` (`id`, `id_kategori`, `nama`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tujuan_donasi` (
 `id` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL
+  `nama` varchar(255) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `kontak` varchar(255) NOT NULL,
+  `telepon` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `profil` varchar(500) NOT NULL,
+  `tujuan` varchar(255) NOT NULL,
+  `tentang` varchar(255) NOT NULL,
+  `fb` varchar(255) NOT NULL,
+  `youtube` varchar(255) NOT NULL,
+  `website` varchar(255) NOT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tujuan_donasi`
 --
 
-INSERT INTO `tujuan_donasi` (`id`, `nama`) VALUES
-(1, 'Indonesia Quran Foundation'),
-(2, 'Sekolah Masjid Terminal');
+INSERT INTO `tujuan_donasi` (`id`, `nama`, `alamat`, `kontak`, `telepon`, `email`, `profil`, `tujuan`, `tentang`, `fb`, `youtube`, `website`, `foto`) VALUES
+(1, 'Indonesia Quran Foundation', '', '', '', '', '', '', '', '', '', '', ''),
+(2, 'Sekolah Masjid Terminal', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 

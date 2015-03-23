@@ -12,6 +12,8 @@
  * @property integer $sub_kategori
  * @property string $deskripsi
  * @property string $pesan
+ * @property string $no_surat
+ * @property string $tanggal
  */
 class Donasi extends CActiveRecord
 {
@@ -31,11 +33,12 @@ class Donasi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_user, tujuan, jumlah, kategori, sub_kategori, deskripsi, pesan', 'required'),
+			array('id_user, tujuan, jumlah, kategori, sub_kategori, deskripsi, pesan, no_surat, tanggal', 'required'),
 			array('id_user, tujuan, jumlah, kategori, sub_kategori', 'numerical', 'integerOnly'=>true),
+			array('no_surat', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, id_user, tujuan, jumlah, kategori, sub_kategori, deskripsi, pesan', 'safe', 'on'=>'search'),
+			array('id, id_user, tujuan, jumlah, kategori, sub_kategori, deskripsi, pesan, no_surat, tanggal', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +67,8 @@ class Donasi extends CActiveRecord
 			'sub_kategori' => 'Sub Kategori',
 			'deskripsi' => 'Deskripsi',
 			'pesan' => 'Pesan',
+			'no_surat' => 'No Surat',
+			'tanggal' => 'Tanggal',
 		);
 	}
 
@@ -93,6 +98,8 @@ class Donasi extends CActiveRecord
 		$criteria->compare('sub_kategori',$this->sub_kategori);
 		$criteria->compare('deskripsi',$this->deskripsi,true);
 		$criteria->compare('pesan',$this->pesan,true);
+		$criteria->compare('no_surat',$this->no_surat,true);
+		$criteria->compare('tanggal',$this->tanggal,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

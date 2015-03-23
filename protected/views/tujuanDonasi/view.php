@@ -23,5 +23,16 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'nama',
+		'alamat',
+		'kontak',
+		'telepon',
+		'email',
+		'profil',
+		'tujuan',
+		'tentang',
+		'fb',
+		'youtube',
+		'website',
+		'foto',
 	),
 )); ?>

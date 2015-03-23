@@ -43,7 +43,7 @@ class User extends CActiveRecord
 			array('provinsi, kota', 'numerical', 'integerOnly'=>true),
 			array('nama, username, email', 'length', 'max'=>30),
 			array('password, foto, alamat', 'length', 'max'=>255),
-			array('telepon', 'length','min'=>10, 'max'=>15),
+			array('telepon', 'length','min'=>10, 'max'=>15,'tooShort'=>'Nomor Telepon anda salah','tooLong'=>'Nomor Telepon anda salah'),
 			array('pendidikan', 'length', 'max'=>20),
 			array('bb', 'length', 'max'=>10),
 			array('fb, twitter, ig', 'length', 'max'=>100),

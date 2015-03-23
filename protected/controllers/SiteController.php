@@ -29,7 +29,24 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		if (false) {
+		//if (Yii::app()->session['user'] == 'admin') {
+			$this->layout = 'admin';
+			$buku = Post::model()->findAll();
+			$jumlahBuku = count($buku);
+
+			$donasi = Donasi::model()->findAll();
+			$jumlahDonasi = count($donasi);
+
+			$user = User::model()->findAll();
+			$jumlahUser = count($user);
+
+			Yii::app()->session['hal'] = 'Dashboard';
+			$this->render('adminIndex',array('jb'=>$jumlahBuku, 'jd'=>$jumlahDonasi,'ju'=>$jumlahUser));
+		}else{
+			$this->layout = 'main';
+			$this->render('index');
+		}
 	}
 
 	/**

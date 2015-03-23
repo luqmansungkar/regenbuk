@@ -275,7 +275,7 @@ class UserController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['User']))
 			$model->attributes=$_GET['User'];
-
+		Yii::app()->session['hal'] = 'Users';
 		$this->render('admin',array(
 			'model'=>$model,
 		));

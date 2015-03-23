@@ -1,0 +1,446 @@
+<?php $this->layout = 'admin'; ?>
+<div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Users</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            DataTables Advanced Tables
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="dataTable_wrapper">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Registration Date</th>
+                                            <th>Verified?</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>Trident</td>
+                                            <td>Internet Explorer 5.5</td>
+                                            <td>Win 95+</td>
+                                            <td class="center">5.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102001</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-danger">Deactivate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>Safari 1.2</td>
+                                            <td>OSX.3</td>
+                                            <td class="center">125.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>Safari 1.3</td>
+                                            <td>OSX.3</td>
+                                            <td class="center">312.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>Safari 2.0</td>
+                                            <td>OSX.4+</td>
+                                            <td class="center">419.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>Safari 3.0</td>
+                                            <td>OSX.4+</td>
+                                            <td class="center">522.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>OmniWeb 5.5</td>
+                                            <td>OSX.4+</td>
+                                            <td class="center">4230/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>iPod Touch / iPhone</td>
+                                            <td>iPod</td>
+                                            <td class="center">420.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Webkit</td>
+                                            <td>S60</td>
+                                            <td>S60</td>
+                                            <td class="center">4130/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Presto</td>
+                                            <td>Nintendo DS browser</td>
+                                            <td>Nintendo DS</td>
+                                            <td class="center">8.5</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeC">
+                                            <td>KHTML</td>
+                                            <td>Konqureror 3.1</td>
+                                            <td>KDE 3.1</td>
+                                            <td class="center">3.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>KHTML</td>
+                                            <td>Konqureror 3.3</td>
+                                            <td>KDE 3.3</td>
+                                            <td class="center">3.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>KHTML</td>
+                                            <td>Konqureror 3.5</td>
+                                            <td>KDE 3.5</td>
+                                            <td class="center">3.30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeX">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeC">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeC">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeX">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeX">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeX">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeC">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeC">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                        <tr class="gradeU">
+                                            <td>102002</td>
+                                            <td>usernameXx1</td>
+                                            <td>email@email.com</td>
+                                            <td class="center">30/5/2015</td>
+                                            <td class="center"><button class="btn btn-sm btn-success">Activate</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                            <div class="well">
+                                <h4>DataTables Usage Information</h4>
+                                <p>DataTables is a very flexible, advanced tables plugin for jQuery. In SB Admin, we are using a specialized version of DataTables built for Bootstrap 3. We have also customized the table headings to use Font Awesome icons in place of images. For complete documentation on DataTables, visit their website at <a target="_blank" href="https://datatables.net/">https://datatables.net/</a>.</p>
+                                <a class="btn btn-default btn-lg btn-block" target="_blank" href="https://datatables.net/">View DataTables Documentation</a>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>

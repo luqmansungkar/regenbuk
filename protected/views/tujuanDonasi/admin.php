@@ -47,6 +47,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'nama',
+		'alamat',
+		'kontak',
+		'telepon',
+		'email',
+		/*
+		'profil',
+		'tujuan',
+		'tentang',
+		'fb',
+		'youtube',
+		'website',
+		'foto',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

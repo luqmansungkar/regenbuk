@@ -7,8 +7,8 @@
 		</div>
 		<div class="row register-donate-container">
 			<div class="col-md-6 menu menu-left">
-				<div class="col-md-5" style="text-align:right">
-					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_bulb.png"  height="100" width="100">
+				<div class="col-md-4" style="text-align:right">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_bulb.png"  height="100" width="auto">
 				</div>
 				<div class="col-md-7">
 					<h3 style="margin-top:0">Gratis! Pasang dan Jual</h3>
@@ -65,8 +65,8 @@
 		</div>
 
 		<div class="row slide news-container">
-			<div class='row' style="padding:0 30px">
-				<h3>Acara dan Kabar Terbaru</h3>
+			<div class='row' style="padding:0 0 30px;text-align:center">
+				<h2>Acara dan Kabar Terbaru</h2>
 			</div>
 			<div class="row news-item-holder">
 				<ul>
@@ -144,8 +144,9 @@
 				</div>
 				<div class="col-md-6">
 					<p><strong>Caranya Mudah!</strong><br />
-						kirim info lengkap dan bukti aktivitas yang sedang dilakukan ke <strong>regenerasibuku@gmail.com</strong></p>
-					</div>
+						kirim info lengkap dan bukti aktivitas yang sedang dilakukan ke <strong>regenerasibuku@gmail.com</strong>
+					</p>
+				</div>
 				</div>
 			</div>
 		</div>
