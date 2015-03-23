@@ -109,25 +109,42 @@ Home
 	text-align: center;
 	padding: 20px 0;
 }
-.hero-container > .hero-image{
+.hero-container .hero-image{
 	width:100%;
-	max-width:1100px;
+	height: auto;
+	/*max-width:1100px;*/
 }
 
 /*Register Donate Container*/
 .register-donate-container > .menu{
-	height: 150px;
+	/*height: 150px;*/
 	padding: 20px;
 	color: #fff;
 	background-image: url("../img/background_transparent.png");
 	background-size: cover;
 }
+
 .register-donate-container > .menu-left{
 	background-color: #096385;
+}
+.register-donate-container > .menu-left > .menu-img{
+	text-align: right;
 }
 .register-donate-container > .menu-right{
 	background-color: #098485;
 }
+.register-donate-container > .menu-right > .menu-img{
+	text-align: left;
+}
+@media (max-width: 768px) {
+	.register-donate-container > .menu{
+		text-align: center;
+	}
+	.register-donate-container > .menu-left > .menu-img,.register-donate-container > .menu-right > .menu-img{
+		text-align: center;
+	}
+}
+/*
 .register-donate-container > .menu-right:after{
 	content: "";
 	width: 0; 
@@ -142,7 +159,7 @@ Home
 	top: 0px;
 	left: -75px;
 }
-
+*/
 /*Benefits Container*/
 .benefits-container{
 	background-color: #fff;
@@ -178,6 +195,18 @@ Home
 	background-size: cover;
 }
 
+.institution-register-container .img-left{
+	text-align: left;
+}
+.institution-register-container .img-right{
+	text-align: right;
+}
+
+@media (max-width: 768px) {
+	.institution-register-container .img-left, .institution-register-container .img-right{
+		text-align: center;
+	}
+}
 /*
 Register
 */
@@ -395,4 +424,59 @@ ul.itemsby-menu{
 
 .verified{
 	cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.photo {
+    transform: skewX(-35deg); 
+    -ms-transform: skewX(-35deg); /* IE 9 */
+    -webkit-transform: skewX(-35deg); /* Safari and Chrome */
+    border-right: 1px solid black; 
+    border-left: 1px solid black; 
+
+    /* new styles */
+    position: relative;
+    overflow: hidden;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}
+
+
+.photo::before {
+    content: "";
+    transform: translateX(30px), skewX(35deg); 
+    -ms-transform: translateX(30px), skewX(35deg); /* IE 9 */
+    -webkit-transform: translateX(30px), skewX(35deg); /* Safari and Chrome */
+    background-image:  url(../img/bgheader.png); 
+    background-repeat: no-repeat; 
+    background-position: top left; 
+
+    /* new styles */
+    position: absolute;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    width: 1000%; /* something ridiculously big */
+    height: 1000%; /* something ridiculously big */
 }
