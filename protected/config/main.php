@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.yii-mail.*',
 	),
 
 	'modules'=>array(
@@ -29,7 +30,6 @@ return array(
 		),
 		
 	),
-
 	// application components
 	'components'=>array(
 
@@ -38,6 +38,11 @@ return array(
 			'allowAutoLogin'=>true,
 			'class'=>'WebUser',
 		),
+	'mail' => array(
+                'class' => 'ext.yii-mail.YiiMail',
+                'transportType'=>'php',
+                'viewPath' => 'application.views.mail',             
+        ),
 
 		// uncomment the following to enable URLs in path-format
 		

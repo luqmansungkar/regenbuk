@@ -1,3 +1,4 @@
+<?php $this->layout = 'admin'; ?>
 <?php
 /* @var $this UserController */
 /* @var $model User */

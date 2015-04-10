@@ -33,7 +33,7 @@ class Donasi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_user, tujuan, jumlah, kategori, sub_kategori, deskripsi, pesan, no_surat, tanggal', 'required'),
+			array('id_user, tujuan, jumlah, kategori, sub_kategori, deskripsi, pesan, no_surat', 'required'),
 			array('id_user, tujuan, jumlah, kategori, sub_kategori', 'numerical', 'integerOnly'=>true),
 			array('no_surat', 'length', 'max'=>255),
 			// The following rule is used by search().

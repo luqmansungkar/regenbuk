@@ -29,8 +29,8 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		if (false) {
-		//if (Yii::app()->session['user'] == 'admin') {
+		//if (false) {
+		if (Yii::app()->session['user'] == 'admin') {
 			$this->layout = 'admin';
 			$buku = Post::model()->findAll();
 			$jumlahBuku = count($buku);

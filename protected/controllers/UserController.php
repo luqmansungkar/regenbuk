@@ -32,7 +32,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('create','update','admin','delete','verifikasi'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -45,6 +45,26 @@ class UserController extends Controller
 		);
 	}
 
+	public function actionVerifikasi(){
+		Yii::app()->session['hal'] = 'Verifikasi User';
+		if (isset($_POST['id']) && isset($_POST['action'])) {
+			$id = $_POST['id'];
+			$action = $_POST['action'];
+			$model=$this->loadModel($id);
+			$model->verified = $action;
+			$model->cpassword = "-";
+			if ($model->save()) {
+				echo '{"status":"sukses","id": '.$_POST['id'].'}';
+			}else{
+				print_r($model->getErrors());
+			}
+			//echo '{"status":"sukses","id": '.$_POST['id'].'}';
+
+		}else{
+			$model = User::model()->findAll();
+			$this->render('verifikasi',array('model'=>$model));
+		}
+	}
 	public function actionForgot(){
 		if(isset($_POST['emailForgot'])){
 			$email = $_POST['emailForgot'];

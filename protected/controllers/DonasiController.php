@@ -44,7 +44,6 @@ class DonasiController extends Controller
 			),
 		);
 	}
-
 	public function actionDynamicCategories()
 	{
 		$data=SubKategori::model()->findAll('id_kategori=:idKategori', 
@@ -79,10 +78,38 @@ class DonasiController extends Controller
 		if(isset($_POST['Donasi']))
 		{
 			$model->attributes=$_POST['Donasi'];
+			$model->no_surat = "temp";
 			$model->id_user = Yii::app()->session['id'];
-			if($model->save())
+			if($model->save()){
 				Yii::app()->user->setFlash('sukses','Anda berhasil didaftarkan. Silakan login.');
-				$this->refresh();
+				
+				$message = new YiiMailMessage;
+		           //this points to the file test.php inside the view path
+		        $message->view = "donasi";  
+
+		        date_default_timezone_set('Asia/Jakarta');
+		        $model->tanggal = date("Y-m-d H:i:s");
+
+		        $user = User::model()->findByPk($model->id_user);
+		        $tujuan = TujuanDonasi::model()->findByPk($model->tujuan);
+		        $model->id_user = $user->nama;
+		        $model->kategori = Kategori::model()->findByPk($model->kategori)->nama;
+				$model->sub_kategori = SubKategori::model()->findByPk($model->sub_kategori)->nama;
+
+
+		        $message->subject    = 'Informasi Donasi';
+		        $params              = array('model'=>$model,'tujuan'=>$tujuan);
+		        $message->setBody($params, 'text/html');   
+				$message->addTo($user->email);
+		        $message->from = 'admin@regenerasibuku.com';   
+		        Yii::app()->mail->send($message);
+
+				//$this->render('email', array('params'=>$model,'tujuan'=>$tujuan));
+			}else{
+				echo "gagal";
+				print_r($model->getErrors());
+				//$this->refresh();
+			}
 		}
 
 		$this->render('buat',array(
