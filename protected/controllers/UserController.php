@@ -143,7 +143,7 @@ class UserController extends Controller
 		$post = Post::model()->findAllByAttributes(array('id_user'=>$id));
 		$model->provinsi = Provinsi::model()->findByPk($model->provinsi)->nama;
 		$model->kota = Kota::model()->findByPk($model->kota)->nama;
-		$this->render('Profile',array(
+		$this->render('profile',array(
 			'model'=>$model,'post'=>$post,
 		));
 	}
@@ -232,7 +232,7 @@ class UserController extends Controller
 		$post = Post::model()->findAllByAttributes(array('id_user'=>Yii::app()->session['id']));
 		$model->provinsi = Provinsi::model()->findByPk($model->provinsi)->nama;
 		$model->kota = Kota::model()->findByPk($model->kota)->nama;
-		$this->render('Profile',array(
+		$this->render('profile',array(
 			'model'=>$model,'post'=>$post,
 		));
 	}

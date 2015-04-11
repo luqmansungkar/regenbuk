@@ -133,7 +133,7 @@ class PostController extends Controller
 		$model = $this->loadModel($id);
 		$model->provinsi = Provinsi::model()->findByPk($model->provinsi)->nama;
 		$model->kota = Kota::model()->findByPk($model->kota)->nama;
-		$model->kategori = kategori::model()->findByPk($model->kategori)->nama;
+		$model->kategori = Kategori::model()->findByPk($model->kategori)->nama;
 		$model->sub_kategori = SubKategori::model()->findByPk($model->sub_kategori)->nama;
 		$user = User::model()->findByPk($model->id_user);
 		$this->render('lihat',array(

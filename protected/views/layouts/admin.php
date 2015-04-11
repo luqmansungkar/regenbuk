@@ -63,10 +63,10 @@
                             <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/admin"><i class="fa fa-users fa-fw"></i>Manage Users</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/tujuandonasi/admin"><i class="fa fa-users fa-fw"></i>Manage Tujuan Donasi</a>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/TujuanDonasi/admin"><i class="fa fa-users fa-fw"></i>Manage Tujuan Donasi</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/tujuandonasi/create"><i class="fa fa-users fa-fw"></i>Tambah Tujuan Donasi</a>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/TujuanDonasi/create"><i class="fa fa-users fa-fw"></i>Tambah Tujuan Donasi</a>
                         </li>
                     </ul>
                 </div>
