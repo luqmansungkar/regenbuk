@@ -42,8 +42,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href=""><?php echo Yii::app()->session['hal'];?></a>
+
             </div>
             <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>        
+-                        </li>
+            </ul>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -55,7 +60,13 @@
                             <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/verifikasi"><i class="fa fa-users fa-fw"></i> Verifikasi User</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/admin"><i class="fa fa-users fa-fw"></i> Users</a>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/admin"><i class="fa fa-users fa-fw"></i>Manage Users</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/tujuandonasi/admin"><i class="fa fa-users fa-fw"></i>Manage Tujuan Donasi</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/tujuandonasi/create"><i class="fa fa-users fa-fw"></i>Tambah Tujuan Donasi</a>
                         </li>
                     </ul>
                 </div>

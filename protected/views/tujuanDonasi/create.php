@@ -1,3 +1,6 @@
+
+<?php $this->layout = 'admin'; ?>
+<div id="page-wrapper">
 <?php
 /* @var $this TujuanDonasiController */
 /* @var $model TujuanDonasi */
@@ -16,3 +19,4 @@ $this->menu=array(
 <h1>Create TujuanDonasi</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

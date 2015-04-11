@@ -1,3 +1,5 @@
+<?php $this->layout = 'admin'; ?>
+<div id="page-wrapper">
 <?php
 /* @var $this UserController */
 /* @var $model User */
@@ -19,3 +21,4 @@ $this->menu=array(
 <h1>Update User <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

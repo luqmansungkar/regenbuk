@@ -6165,3 +6165,34 @@ Stack trace:
 REQUEST_URI=/regenbuk/js/jquery.min.map
 HTTP_REFERER=http://localhost/regenbuk/user/verifikasi
 ---
+2015/04/11 06:43:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/
+---
+2015/04/11 06:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signout".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('signout')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('signout')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/signout')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/signout
+HTTP_REFERER=http://localhost/regenbuk/
+---
+2015/04/11 06:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signout".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('signout')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('signout')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/signout')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\regenbuk\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/regenbuk/user/signout
+HTTP_REFERER=http://localhost/regenbuk/
+---
