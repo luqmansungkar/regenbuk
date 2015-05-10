@@ -15,7 +15,8 @@ $this->menu=array(
 	array('label'=>'Manage TujuanDonasi', 'url'=>array('admin')),
 );
 ?>
+<div class="col-lg-12">
+	<h1>Update Tujuan Donasi <?php echo $model->id; ?></h1>
 
-<h1>Update TujuanDonasi <?php echo $model->id; ?></h1>
-
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+	<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

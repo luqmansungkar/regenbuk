@@ -19,86 +19,112 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'nama'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'nama'); ?></label>
+			<?php echo $form->textField($model,'nama',array('size'=>30,'maxlength'=>30, 'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'nama'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'username'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'username'); ?></label>
+			<?php echo $form->textField($model,'username',array('size'=>30,'maxlength'=>30, 'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'username'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'email'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'email'); ?></label>
+			<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>30, 'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'email'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'password'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'password'); ?></label>
+			<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255, 'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'password'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'provinsi'); ?>
-		<?php echo $form->textField($model,'provinsi'); ?>
-		<?php echo $form->error($model,'provinsi'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'provinsi'); ?></label>
+			<?php echo $form->textField($model,'provinsi', array('class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'provinsi'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'kota'); ?>
-		<?php echo $form->textField($model,'kota'); ?>
-		<?php echo $form->error($model,'kota'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'kota'); ?></label>
+			<?php echo $form->textField($model,'kota', array('class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'kota'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'telepon'); ?>
-		<?php echo $form->textField($model,'telepon',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'telepon'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'telepon'); ?></label>
+			<?php echo $form->textField($model,'telepon',array('size'=>15,'maxlength'=>15,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'telepon'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'pendidikan'); ?>
-		<?php echo $form->textField($model,'pendidikan',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'pendidikan'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'pendidikan'); ?></label>
+			<?php echo $form->textField($model,'pendidikan',array('size'=>20,'maxlength'=>20,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'pendidikan'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bb'); ?>
-		<?php echo $form->textField($model,'bb',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'bb'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'bb'); ?></label>
+			<?php echo $form->textField($model,'bb',array('size'=>10,'maxlength'=>10,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'bb'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fb'); ?>
-		<?php echo $form->textField($model,'fb',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'fb'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'fb'); ?></label>
+			<?php echo $form->textField($model,'fb',array('size'=>60,'maxlength'=>100,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'fb'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'twitter'); ?>
-		<?php echo $form->textField($model,'twitter',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'twitter'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'twitter'); ?></label>
+			<?php echo $form->textField($model,'twitter',array('size'=>60,'maxlength'=>100,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'twitter'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'ig'); ?>
-		<?php echo $form->textField($model,'ig',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'ig'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'ig'); ?></label>
+			<?php echo $form->textField($model,'ig',array('size'=>60,'maxlength'=>100,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'ig'); ?></p>
+		</div>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'bio'); ?>
-		<?php echo $form->textArea($model,'bio',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'bio'); ?>
+	<div class="col-lg-12">
+		<div class="form-group">
+			<label><?php echo $form->labelEx($model,'bio'); ?></label>
+			<?php echo $form->textArea($model,'bio',array('rows'=>6, 'cols'=>50,'class' => 'form-control')); ?>
+			<p class="help-block"><?php echo $form->error($model,'bio'); ?></p>
+		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="col-lg-12">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-primary btn-lg')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

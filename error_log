@@ -1,0 +1,38 @@
+[19-Apr-2015 13:01:55 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/k2218170/public_html/protected/views/tujuanDonasi/_form.php on line 25
+[19-Apr-2015 13:01:56 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/k2218170/public_html/protected/views/tujuanDonasi/_form.php on line 25
+[19-Apr-2015 13:01:57 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/k2218170/public_html/protected/views/tujuanDonasi/_form.php on line 25
+[19-Apr-2015 13:07:45 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:46 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:47 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:47 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:49 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:50 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:52 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[19-Apr-2015 13:07:53 America/New_York] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in /home/k2218170/public_html/protected/views/tujuanDonasi/admin.php on line 79
+[24-Apr-2015 12:52:30 America/New_York] PHP Fatal error:  Class 'table table-striped table-bordered table-hover' not found in /home/k2218170/public_html/framework/YiiBase.php on line 202
+[24-Apr-2015 12:52:32 America/New_York] PHP Fatal error:  Class 'table table-striped table-bordered table-hover' not found in /home/k2218170/public_html/framework/YiiBase.php on line 202
+[24-Apr-2015 12:52:36 America/New_York] PHP Fatal error:  Class 'table table-striped table-bordered table-hover' not found in /home/k2218170/public_html/framework/YiiBase.php on line 202
+[24-Apr-2015 12:52:53 America/New_York] PHP Fatal error:  Class 'CButtonColumn table table-striped table-bordered table-hover' not found in /home/k2218170/public_html/framework/YiiBase.php on line 202
+[24-Apr-2015 12:52:54 America/New_York] PHP Fatal error:  Class 'CButtonColumn table table-striped table-bordered table-hover' not found in /home/k2218170/public_html/framework/YiiBase.php on line 202
+[24-Apr-2015 12:54:55 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 65
+[24-Apr-2015 12:54:56 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 65
+[24-Apr-2015 17:26:40 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:26:42 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:48 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:49 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:51 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:52 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:52 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:54 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:57 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:29:59 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:30:06 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 66
+[24-Apr-2015 17:30:41 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 71
+[24-Apr-2015 17:30:43 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 71
+[24-Apr-2015 17:31:13 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 71
+[24-Apr-2015 17:31:14 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 71
+[24-Apr-2015 17:31:15 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 71
+[24-Apr-2015 17:31:19 America/New_York] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/k2218170/public_html/protected/views/user/admin.php on line 71
+[24-Apr-2015 17:45:44 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/k2218170/public_html/protected/views/user/_form.php on line 24
+[24-Apr-2015 17:45:45 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/k2218170/public_html/protected/views/user/_form.php on line 24
+[24-Apr-2015 17:45:48 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/k2218170/public_html/protected/views/user/_form.php on line 24

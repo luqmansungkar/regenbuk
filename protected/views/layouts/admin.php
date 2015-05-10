@@ -12,12 +12,12 @@
     <title>Regenerasi Buku - Admin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo Yii::app()->getBaseUrl(true); ?>/admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<?php echo Yii::app()->getBaseUrl(true); ?>/admin/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="<?php echo Yii::app()->request->baseUrl; ?>/admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo Yii::app()->getBaseUrl(true); ?>/admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,27 +46,26 @@
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
-                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>        
--                        </li>
+                <li><a href="<?php echo Yii::app()->getBaseUrl(true); ?>/site/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
             </ul>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/verifikasi"><i class="fa fa-users fa-fw"></i> Verifikasi User</a>
+                            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>/user/verifikasi"><i class="fa fa-users fa-fw"></i> Verifikasi User</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/admin"><i class="fa fa-users fa-fw"></i>Manage Users</a>
+                            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>/user/admin"><i class="fa fa-users fa-fw"></i>Manage Users</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/TujuanDonasi/admin"><i class="fa fa-users fa-fw"></i>Manage Tujuan Donasi</a>
+                            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>/TujuanDonasi/admin"><i class="fa fa-users fa-fw"></i>Manage Tujuan Donasi</a>
                         </li>
                         <li>
-                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/TujuanDonasi/create"><i class="fa fa-users fa-fw"></i>Tambah Tujuan Donasi</a>
+                            <a href="<?php echo Yii::app()->getBaseUrl(true); ?>/TujuanDonasi/create"><i class="fa fa-users fa-fw"></i>Tambah Tujuan Donasi</a>
                         </li>
                     </ul>
                 </div>
@@ -82,13 +81,13 @@
     <!-- /#wrapper -->
 
 <!-- jQuery -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.min.js"></script>
+    <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+    <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/sb-admin-2.js"></script>
+    <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/sb-admin-2.js"></script>
 
 </body>
 

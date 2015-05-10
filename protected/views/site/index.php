@@ -2,7 +2,7 @@
 		<div class="row slide hero-container">
 			<div class="col-md-12">
 			<?php $this->widget('SearchWidget'); ?>	
-				<img class="hero-image" src="http://placehold.it/1100x350">
+				<img class="hero-image" src="<?php Yii::app()->request->baseUrl; ?>/img/cover_page_1.jpg">
 			</div>
 		</div>
 		<div class="row register-donate-container">
@@ -28,45 +28,13 @@
 			</div>
 		</div>
 
-		<div class="row slide benefits-container">
-			<div class="col-md-3" style="text-align:left">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_middle.png" height="70" alt="logo"><br><br>
-				<p><strong>regenerasibuku.com</strong> adalah situs jual beli buku bekas secara online. Memberikan kemudahan dan solusi bagi kamu untuk menjual dan mencari buku bekas melalui situs website di www.regenerasibuku.com</p>
-			</div>
-			<div class="col-md-9" style="">
-				<h3 style="margin-top:0"><strong>Apa Kelebihan Jual Beli Buku Bekas Di <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" height="50" alt="logo">?</strong></h3>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="col-md-4">
-							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_regen.png" height="80" width="80">
-						</div>
-						<div class="col-md-8">
-							Situs jual beli buku bekas pertama di Indonesia yang melibatkan pengunjung untuk dapat merasakan pengalaman berniaga buku bekas secara online.
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="col-md-4">
-							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_docs.png" height="80" width="80">
-						</div>
-						<div class="col-md-8">
-							Fitur website yang bersahabat memberikan kemudahan bagi semua kalangan untuk dapat berniaga buku bekas di regenerasibuku.com
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="col-md-4">
-							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_people.png" height="80" width="80">
-						</div>
-						<div class="col-md-8">
-							Memberi kemudahan dalam mencari dan mengakses referensi buku bekas.
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="row slide benefits-container" style="padding:0;">
+			<img class="hero-image" src="<?php echo Yii::app()->request->baseUrl; ?>/img/map.png" style="width:100%;">
 		</div>
 
 		<div class="row slide news-container">
 			<div class='row' style="padding:0 0 30px;text-align:center">
-				<h2>Acara dan Kabar Terbaru</h2>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_berita.png">
 			</div>
 			<div class="row news-item-holder">
 				<ul>

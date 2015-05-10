@@ -47,7 +47,12 @@
 					?>" style="border-radius:50%;border: 5px solid #fff;position:absolute;bottom:-80px;left:-50px;top:10px;height:100px;width:100px">
 					</div>
 					<div class="col-md-10" style="color:#fff">
-						<h2><strong><?php echo $user->username; ?></strong></h2>
+						<h2><strong><?php echo $user->username; ?></strong>
+						<?php if ($user->verified == 1) { ?>
+			<span class="verified fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="Verified Account"style="color: #5890FF" />
+		<?php } ?>
+						
+						</h2>
 						<a class="btn btn-primary" href="<?php echo Yii::app()->request->baseUrl."/user/".$user->id; ?>"><i class="fa fa-profile"></i> Kunjungi Profile</a>
 						<p>Temukan banyak koleksi buku pribadi di dalam profilenya.</p>
 					</div>
