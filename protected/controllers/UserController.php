@@ -204,7 +204,6 @@ class UserController extends Controller
 	public function actionEditProfile(){
 		$model=$this->loadModel(Yii::app()->session['id']);
 		$foto = $model->foto;
-		echo "foto: ".$foto;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -214,13 +213,19 @@ class UserController extends Controller
 			$model->attributes=$_POST['User'];
 			$model->cpassword = 'sesuatu';
 			$uploadedFile=CUploadedFile::getInstance($model,'foto');
-			if (!empty($uploadedFile)) {
+			if (!empty($uploadedFile) && is_object($uploadedFile) && get_class($uploadedFile)==='CUploadedFile') {
+				//print_r($uploadedFile);
+				/*echo "tipe:".$uploadedFile->type;
+				$tipe = $uploadedFile->type;
+				if ($tipe != 'image/png') {
+					$model->addError($foto, "{$foto} file is of wrong type");
+				}*/
 				$namaFile = rand(0,99999)."-pp-".$uploadedFile;
 				$model->foto = $namaFile;
 			}else{
 				$model->foto = $foto;
 			}
-			echo "model foto: ".$model->foto;
+			//echo "model foto: ".$model->foto;
 			//print_r($model);
 			if ($model->validate()) {
 				if($model->save()){
@@ -229,10 +234,10 @@ class UserController extends Controller
 					}
 					$this->redirect(array('view','id'=>$model->id));
 				}else{
-					print_r($model->getErrors());
+					//print_r($model->getErrors());
 				}
 			}else{
-				 print_r($model->errors);
+				 //print_r($model->errors);
 			}
 			
 		}

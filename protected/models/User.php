@@ -49,7 +49,7 @@ class User extends CActiveRecord
 			array('bb', 'length', 'max'=>10),
 			array('fb, twitter, ig', 'length', 'max'=>100),
 			array('bio', 'safe'),
-			array('foto','checkFile','mimeTypes'=>array('image/jpg', 'image/gif', 'image/png', 'image/jpeg'),'allowEmpty'=>true),
+			array('foto','checkFile','allowEmpty'=>true),
 			array('email','unique', 'message'=>'Email sudah terdaftar.'),
 			array('cpassword','compare','compareAttribute'=>'password','message'=>'Password tidak sama','on'=>'create'),
 			// The following rule is used by search().
@@ -64,18 +64,15 @@ class User extends CActiveRecord
 	    $allowEmpty = isset($params["allowEmpty"]) ?$params["allowEmpty"] :false;
 	    /** @var CUploadedFile $value */
 	    $value = $this->{$attribute};
+	    $path_parts = pathinfo($value);
+	    $ext = $path_parts['extension'];
 
 	    if (!$allowEmpty && empty($value))
 	        $this->addError($attribute, "{$attribute} can not be empty");
 
 	    if (!empty($value)) {
-	        if (is_object($value) && CUploadedFile::class === get_class($value) && 0 < sizeof($mimeTypes)) {
-	            if (!is_array($value->type, $mimeTypes))
-	                $this->addError($attribute, "{$attribute} file is of wrong type");
-	        } elseif (!is_string($value)) {
-	            // we can die silently cause this error won't actually ever get to the user in normal use cases
-	            $this->addError($attribute, "{$attribute} must be of type either CUploadedFile or PHP string");
-	        }
+            if ($ext != 'jpg' && $ext != 'gif' && $ext != 'png' && $ext != 'jpeg')
+                $this->addError($attribute, "Tipe file harus berupa gambar (jpg, jpeg, gif, png)");
 	    }
 	}
 	/**
