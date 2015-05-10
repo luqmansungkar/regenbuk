@@ -3,6 +3,9 @@
 		<div class="col-md-12">
 			<?php $this->widget('SearchWidget'); ?>	
 		</div>
+		<?php if (Yii::app()->session['id'] == $model->id) { ?>
+			<div><a href="<?php echo Yii::app()->request->baseUrl ?>/user/editprofile">Edit Profile <span class="fa fa-pencil"></span></a></div>
+		<?php }?>
 	</div>
 
 
@@ -11,7 +14,6 @@
 		<?php if ($model->verified == 1) { ?>
 			<span class="verified fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="Verified Account"style="color: #5890FF" />
 		<?php } ?>
-		
 		</h1>
 		<img class="profile-image" src="<?php 
 			if (empty($model->foto)) {
@@ -20,9 +22,10 @@
 				echo Yii::app()->request->baseUrl."/images/user/".$model->foto;
 			}
 		?> ">
+		
 	</div>
-
 	<div class="row slide basic-info-container" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/bgheader.png);">
+		
 		<div class="col-md-offset-3 col-md-3" style="text-align:left">
 			<div>Nama Lengkap: <?php echo $model->nama; ?></div>
 			<div>Asal Provinsi: <?php echo $model->provinsi; ?></div>
@@ -35,6 +38,7 @@
 			<div>Facebook: <?php echo $model->fb; ?></div>
 			<div>Twitter: <?php echo $model->twitter; ?></div>
 		</div>
+		
 	</div>
 
 	<div class="row slide slide-description">

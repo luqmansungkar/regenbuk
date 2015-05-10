@@ -2,7 +2,7 @@
 		<div class="row slide hero-container">
 			<div class="col-md-12">
 			<?php $this->widget('SearchWidget'); ?>	
-				<img class="hero-image" src="<?php Yii::app()->request->baseUrl; ?>/img/cover_page_1.jpg">
+				<img class="hero-image" src="<?php echo Yii::app()->request->baseUrl; ?>/img/cover_page_1.jpg">
 			</div>
 		</div>
 		<div class="row register-donate-container">

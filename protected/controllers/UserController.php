@@ -53,7 +53,10 @@ class UserController extends Controller
 			$model=$this->loadModel($id);
 			$model->verified = $action;
 			$model->cpassword = "-";
+			$foto = $model->foto;
+			//print_r($model);
 			if ($model->save()) {
+				print_r($model);
 				echo '{"status":"sukses","id": '.$_POST['id'].'}';
 			}else{
 				print_r($model->getErrors());
@@ -200,6 +203,8 @@ class UserController extends Controller
 
 	public function actionEditProfile(){
 		$model=$this->loadModel(Yii::app()->session['id']);
+		$foto = $model->foto;
+		echo "foto: ".$foto;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -212,14 +217,24 @@ class UserController extends Controller
 			if (!empty($uploadedFile)) {
 				$namaFile = rand(0,99999)."-pp-".$uploadedFile;
 				$model->foto = $namaFile;
+			}else{
+				$model->foto = $foto;
 			}
+			echo "model foto: ".$model->foto;
 			//print_r($model);
-			if($model->save()){
-				if (!empty($uploadedFile)) {
-					$uploadedFile->saveAs(Yii::app()->basePath.'/../images/user/'.$namaFile);
+			if ($model->validate()) {
+				if($model->save()){
+					if (!empty($uploadedFile)) {
+						$uploadedFile->saveAs(Yii::app()->basePath.'/../images/user/'.$namaFile);
+					}
+					$this->redirect(array('view','id'=>$model->id));
+				}else{
+					print_r($model->getErrors());
 				}
-				$this->redirect(array('view','id'=>$model->id));
+			}else{
+				 print_r($model->errors);
 			}
+			
 		}
 
 		$this->render('editProfile',array(
