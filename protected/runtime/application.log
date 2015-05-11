@@ -8724,3 +8724,66 @@ Stack trace:
 REQUEST_URI=/regenbuk/post/cari
 in C:\xampp\htdocs\regenbuk\protected\controllers\PostController.php (124)
 in C:\xampp\htdocs\regenbuk\index.php (14)
+2015/05/11 06:02:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/user/admin
+---
+2015/05/11 06:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/user/admin
+---
+2015/05/11 06:08:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/
+---
+2015/05/11 06:08:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/user/admin
+---
+2015/05/11 06:08:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/user/admin
+---
+2015/05/11 06:08:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/TujuanDonasi/admin
+---
+2015/05/11 06:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.min.m...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\regenbuk\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/regenbuk/js/jquery.min.map
+HTTP_REFERER=http://localhost/regenbuk/user/admin
+---
