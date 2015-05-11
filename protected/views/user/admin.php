@@ -37,11 +37,19 @@
 
         //'password',
 
-        'provinsi',
+        //'provinsi',
 
-        
+        array(
+            'name'=>'provinsi',
+            'value'=>'Provinsi::model()->findByPk($data->provinsi)->nama',
+            ),
 
-        'kota',
+        //'kota',
+
+        array(
+            'name'=>'kota',
+            'value'=>'Kota::model()->findByPk($data->kota)->nama',
+            ),
 
         'telepon',
 
