@@ -66,53 +66,58 @@ class PostController extends Controller
 	public function actionCari(){
 		$cari=$_POST['cari'];
 		//print_r($cari);
+		$kondisi = "";
 		$criteria = new CDbCriteria();
 		if ($cari['judul'] == '') {
-			$kondisi = "(";
+			//$kondisi = "(";
 		}else{
-			$kondisi = "judul like '%".$cari['judul']."%' and (";
+			$kondisi = "judul like '%".$cari['judul']."%' and ";
 		}
 
-		if (strpos($cari['provinsi'], 'non') !== FALSE) {
-			$lokasi = explode("-", $cari['provinsi'])[1];
-			//echo "lokasi ".$lokasi;
-			switch ($lokasi) {
-				case 'jab':
-					$kondisi .= "provinsi=11 or kota=161 or kota=162 or kota=179 or kota=180 or kota=183 or kota=224 or kota=227 or kota=228";
-					break;
-				case 'jak':
-					$kondisi .= "provinsi=11";
-					break;
-				case 'bog':
-					$kondisi .= "kota=162 or kota=180";
-					break;
-				case 'tan':
-					$kondisi .= "kota=224 or kota=227 or kota=228";
-					break;
-				case 'bek':
-					$kondisi .= "kota=161 or kota=162";
-					break;
-				case 'ban':
-					$kondisi .= "kota=159 or kota=160 or kota=177";
-					break;
-				case 'yog':
-					$kondisi .= "provinsi=16";
-					break;
-				case 'sur':
-					$kondisi .= "kota=258";
-					break;
-				case 'med':
-					$kondisi .= "kota=49";
-					break;
-				default:
-					# code...
-					break;
+		if ($cari['provinsi'] != '') {
+			$kondisi .= "(";
+			if (strpos($cari['provinsi'], 'non') !== FALSE) {
+				$lokasi = explode("-", $cari['provinsi'])[1];
+				//echo "lokasi ".$lokasi;
+				switch ($lokasi) {
+					case 'jab':
+						$kondisi .= "provinsi=11 or kota=161 or kota=162 or kota=179 or kota=180 or kota=183 or kota=224 or kota=227 or kota=228";
+						break;
+					case 'jak':
+						$kondisi .= "provinsi=11";
+						break;
+					case 'bog':
+						$kondisi .= "kota=162 or kota=180";
+						break;
+					case 'tan':
+						$kondisi .= "kota=224 or kota=227 or kota=228";
+						break;
+					case 'bek':
+						$kondisi .= "kota=161 or kota=162";
+						break;
+					case 'ban':
+						$kondisi .= "kota=159 or kota=160 or kota=177";
+						break;
+					case 'yog':
+						$kondisi .= "provinsi=16";
+						break;
+					case 'sur':
+						$kondisi .= "kota=258";
+						break;
+					case 'med':
+						$kondisi .= "kota=49";
+						break;
+					default:
+						# code...
+						break;
+				}
+			}else{
+				$kondisi .= "provinsi=".$cari['provinsi'];
 			}
-		}else{
-			$kondisi .= "provinsi=".$cari['provinsi'];
+			$kondisi .= ") and ";
 		}
 
-		$kondisi .= ") and kategori=:kategori and sub_kategori=:sub_kategori";
+		$kondisi .= "kategori=:kategori and sub_kategori=:sub_kategori";
 		//echo $kondisi;
 		$criteria->condition = $kondisi;
 		$criteria->params = array(':kategori'=>$cari['kategori'], ':sub_kategori'=>$cari['sub_kategori']);

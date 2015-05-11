@@ -27,10 +27,10 @@
 								<i class="fa fa-search"></i>
 							</span>
 							<?php 
-							echo CHtml::textField('cari[judul]','',array('class'=>'form-control','required'=>'true','placeholder'=>'Cari buku...','style'=>'width:250px'));?>
+							echo CHtml::textField('cari[judul]','',array('class'=>'form-control','placeholder'=>'Cari buku...','style'=>'width:250px'));?>
 						</div>
 						<?php 
-						echo CHtml::dropDownList('cari[provinsi]','',$provArray,array('prompt'=>'Pilih Lokasi','class'=>'form-control','placeholder'=>'Asal Kota','required'=>'true'));?>
+						echo CHtml::dropDownList('cari[provinsi]','',$provArray,array('prompt'=>'Pilih Lokasi','class'=>'form-control','placeholder'=>'Asal Kota'));?>
 						<?php 
 							echo CHtml::dropDownList('cari[kategori]','', CHtml::listData(Kategori::model()->findAll(),'id','nama'),
 							array('prompt'=>'Pilih Kategori','class'=>'form-control','placeholder'=>'Kategori','required'=>'true',
