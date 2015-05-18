@@ -81,7 +81,7 @@
     <!-- /#wrapper -->
 
 <!-- jQuery -->
-    <!--<script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.min.js"></script>-->
+    <!-- <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/jquery.min.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo Yii::app()->getBaseUrl(true); ?>/js/bootstrap.min.js"></script>

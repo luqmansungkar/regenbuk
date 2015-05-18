@@ -15,7 +15,8 @@
 			<?php 
 				$gambar = explode(";", $model->foto,-1);
 			?>
-				<div class="img-holder" style="background-image:url('<?php echo Yii::app()->request->baseUrl."/images/post/".$gambar[0]; ?>');">
+				<div class="img-holder">
+					<?php echo '<img src="'.Yii::app()->request->baseUrl.'/images/post/'.$gambar[0].'" style="max-width:100%;max-height:100%" >'; ?>
 				</div>
 				<div class="img-small-holder">
 					<ul>
@@ -28,7 +29,7 @@
 				</div>
 				<div class="" style=" text-align:left;color:#fff;">
 					<div style="font-size:20px;font-weight:bold;background-color:#DD9606;padding:5px">Informasi dan Sinopsis Buku:</div>
-					<div style="font-size:14px;background-color:#FEC144;padding:5px"><?php echo $model->konten; ?></div>
+					<div style="font-size:14px;background-color:#FEC144;padding:5px;max-height:300px;overflow-y:scroll"><?php echo $model->konten; ?></div>
 				</div>
 			</div>
 		</div>

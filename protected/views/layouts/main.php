@@ -60,18 +60,18 @@
 								<a class="btn btn-primary btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/tujuanDonasi/create">Tujuan Donasi</a>
 								<a href="<?php echo Yii::app()->request->baseUrl; ?>/donasi/buat" class="btn btn-primary btn-xs btn-block">Verifikasi User</a>
 							<?php } else { ?>
-								<a class="btn btn-primary btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/post/buat">Upload/Pasang Buku</a>
+								<a class="btn btn-primary btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/post/buat">Pasang Iklan</a>
 								<a href="<?php echo Yii::app()->request->baseUrl; ?>/donasi/buat" class="btn btn-primary btn-xs btn-block">Donasi Buku</a>
 								<?php } ?>
 							</div>
 						</li>
 						<li>
 							<div style="padding:15px 0">
-								<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>" >Beranda</a>
+								<!-- <a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>" >Beranda</a> -->
 								<?php if (Yii::app()->session['role'] == 'admin') { ?>
 									<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/admin">List User</a>
 								<?php } else { ?>
-									<a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Profile</a>
+									<!-- <a class="btn btn-default btn-xs btn-block" href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Profile</a> -->
 								<?php } ?>
 							</div>
 						</li>
@@ -90,9 +90,15 @@
 							</div>
 						</li>
 						<li>
-							<div style="padding:15px 0">
-								<div style="color:#fff;text-align:center;margin-bottom:5px"><strong>Hi! <?php echo Yii::app()->session['user'] ?></strong></div>
-								<a class="btn btn-primary btn-xs" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/logout" style="text-align:center;">Logout</a>
+							<div style="padding:35px 0">
+								<div style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><strong>Hi! <?php echo Yii::app()->session['user'] ?> <span class="caret"></span></strong></div>  
+								  <ul class="dropdown-menu" role="menu" style="top:auto">
+								    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Beranda</a></li>
+								    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/editprofile">Edit Profile</a></li>
+								    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/ubahpassword">Ganti Password</a></li>
+								    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout">Logout</a></li>
+								  </ul>
+								
 							</div>
 						</li>
 					</ul>
@@ -114,9 +120,16 @@
 				</ul>
 			</div>
 			<div class="partner">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_footer.png" height="100">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_footer.png" height="100"><br/>
+					<img src="http://placehold.it/60x60" width='60'>
+					<img src="http://placehold.it/60x60" width='60'>
+					<img src="http://placehold.it/60x60" width='60'>
+					<img src="http://placehold.it/60x60" width='60'>
+					<img src="http://placehold.it/60x60" width='60'>
+					<img src="http://placehold.it/60x60" width='60'>
 			</div>
 			<div class="footer-bottom">
+				<a href="">Jual beli aman</a> | <a href="">Syarat dan Ketentuan</a>  | <a href="">Hubungi Kami</a> 
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,6 @@
 		<div class="row register-donate-container">
 			<div class="col-md-6 menu menu-left">
 				<div class="col-md-4" style="text-align:right">
-					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_bulb.png"  height="100" width="auto">
 				</div>
 				<div class="col-md-7">
 					<h3 style="margin-top:0">Gratis! Pasang dan Jual</h3>
@@ -18,7 +17,6 @@
 			</div>
 			<div class="col-md-6 menu menu-right">
 				<div class="col-md-4" style="text-align:right">
-					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_news.png" height="100" width="100">
 				</div>
 				<div class="col-md-8">
 					<h3 style="margin-top:0">Ayo ikut memberi perubahan</h3>
@@ -34,62 +32,128 @@
 
 		<div class="row slide news-container">
 			<div class='row' style="padding:0 0 30px;text-align:center">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_berita.png">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_berita.png" height="80">
 			</div>
 			<div class="row news-item-holder">
 				<ul>
 					<li class="row">
 						<div class="col-md-1">
-							<img src="http://placehold.it/80x80">
+							<img src="http://placehold.it/60x60" width='60'>
 						</div>
 						<div class="col-md-11">
 							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
 						</div>
 					</li>
 					<li class="row">
 						<div class="col-md-1">
-							<img src="http://placehold.it/80x80">
+							<img src="http://placehold.it/60x60" width='60'>
 						</div>
 						<div class="col-md-11">
 							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
 						</div>
 					</li>
 					<li class="row">
 						<div class="col-md-1">
-							<img src="http://placehold.it/80x80">
+							<img src="http://placehold.it/60x60" width='60'>
 						</div>
 						<div class="col-md-11">
 							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
 						</div>
 					</li>
 					<li class="row">
 						<div class="col-md-1">
-							<img src="http://placehold.it/80x80">
+							<img src="http://placehold.it/60x60" width='60'>
 						</div>
 						<div class="col-md-11">
 							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
 						</div>
 					</li>
 					<li class="row">
 						<div class="col-md-1">
-							<img src="http://placehold.it/80x80">
+							<img src="http://placehold.it/60x60" width='60'>
 						</div>
 						<div class="col-md-11">
 							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
 						</div>
 					</li>
 					<li class="row">
 						<div class="col-md-1">
-							<img src="http://placehold.it/80x80">
+							<img src="http://placehold.it/60x60" width='60'>
 						</div>
 						<div class="col-md-11">
 							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed metus venenatis, dignissim mauris eget, commodo ex. Integer in risus ipsum. Proin molestie sapien dignissim risus tempus consectetur. Donec eget vestibulum erat. Duis a arcu nec purus varius aliquam a consequat ligula.</p>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
+						</div>
+					</li>
+					<li class="row">
+						<div class="col-md-1">
+							<img src="http://placehold.it/60x60" width='60'>
+						</div>
+						<div class="col-md-11">
+							<h5><strong>9 Januari 2015 | Lorem Ipsum</strong></h5>
 						</div>
 					</li>
 				</ul>
@@ -108,7 +172,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-3" style="text-align:right">
-					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_docs.png" height="100" width="100">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_docs.png" height="100" width="100"><br />
 				</div>
 				<div class="col-md-6">
 					<p><strong>Caranya Mudah!</strong><br />

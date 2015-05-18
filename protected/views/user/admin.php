@@ -37,7 +37,7 @@
 
         //'password',
 
-        //'provinsi',
+       //'provinsi',
 
         array(
             'name'=>'provinsi',

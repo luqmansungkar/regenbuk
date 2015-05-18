@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Regenerasi Buku adalah situs jual beli buku bekas secara online. Memberikan kemudahan dan solusi bagi kamu untuk menjual dan mencari buku bekas melalui situs website di www.regenerasibuku.com">
+	<meta name="keywords" content="regenerasi buku, jual beli buku, beli buku online">
+	<meta name="ROBOTS" content="INDEX, FOLLOW">
+
+	<script type="text/javascript" src="Regenerasi%20Buku_files/jquery.js"></script>
+<title>Regenerasi Buku</title>
+	<link rel="icon" href="http://regenerasibuku.com/img/icon.png" type="image/x-icon">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css" href="Regenerasi%20Buku_files/css.css">
+	
+	<!-- Default CSS -->
+	<link media="all" type="text/css" rel="stylesheet" href="Regenerasi%20Buku_files/bootstrap.css">
+	<link media="all" type="text/css" rel="stylesheet" href="Regenerasi%20Buku_files/bootstrap-theme.css">
+	<link media="all" type="text/css" rel="stylesheet" href="Regenerasi%20Buku_files/font-awesome.css">
+	<link media="all" type="text/css" rel="stylesheet" href="Regenerasi%20Buku_files/style.css">
+<script>try {  for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){    var lastpass_f = document.forms[lastpass_iter];    if(typeof(lastpass_f.lpsubmitorig)=="undefined"){      if (typeof(lastpass_f.submit) == "function") {        lastpass_f.lpsubmitorig = lastpass_f.submit;        lastpass_f.submit = function(){          var form = this;          try {            if (document.documentElement && 'createEvent' in document)            {              var forms = document.getElementsByTagName('form');              for (var i=0 ; i<forms.length ; ++i)                if (forms[i]==form)                {                  var element = document.createElement('lpformsubmitdataelement');                  element.setAttribute('formnum',i);                  element.setAttribute('from','submithook');                  document.documentElement.appendChild(element);                  var evt = document.createEvent('Events');                  evt.initEvent('lpformsubmit',true,false);                  element.dispatchEvent(evt);                  break;                }            }          } catch (e) {}          try {            form.lpsubmitorig();          } catch (e) {}        }      }    }  }} catch (e) {}</script></head>
+<body>
+<!-- Docs master nav -->
+	<header class="navbar navbar-default navbar-static-top bs-docs-nav" id="top" role="banner">
+		<div class="container-fluid" style="max-width:1200px">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://regenerasibuku.com/" style="padding: 4px 15px"><img src="Regenerasi%20Buku_files/logo_header.png" alt="logo" height="90"></a>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+									<ul class="nav navbar-nav navbar-right">
+						<li>
+							<div style="padding:15px">
+															<a class="btn btn-primary btn-xs btn-block" href="http://regenerasibuku.com/post/buat">Pasang Iklan</a>
+								<a href="http://regenerasibuku.com/donasi/buat" class="btn btn-primary btn-xs btn-block">Donasi Buku</a>
+															</div>
+						</li>
+						<li>
+							<div style="padding:15px 0">
+								<!-- <a class="btn btn-default btn-xs btn-block" href="" >Beranda</a> -->
+																	<!-- <a class="btn btn-default btn-xs btn-block" href="/user/profile">Profile</a> -->
+															</div>
+						</li>
+						<li>
+							<div style="padding:15px 15px;">
+																<img src="Regenerasi%20Buku_files/60x60.gif" style="border-radius:50%;overflow:hidden;width:60px;height:60px">
+							</div>
+						</li>
+						<li>
+							<div style="padding:35px 0">
+								<div style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><strong>Hi! 1 <span class="caret"></span></strong></div>  
+								  <ul class="dropdown-menu" role="menu" style="top:auto">
+								    <li><a href="http://regenerasibuku.com/user/profile">Beranda</a></li>
+								    <li><a href="http://regenerasibuku.com/user/editprofile">Edit Profile</a></li>
+								    <li><a href="http://regenerasibuku.com/user/changepassword">Ganti Password</a></li>
+								    <li><a href="http://regenerasibuku.com/index.php/site/logout">Logout</a></li>
+								  </ul>
+								
+							</div>
+						</li>
+					</ul>
+							</nav>
+		</div>
+	</header>
+
+		
+		<div class="span-19">
+	<div id="content">
+		<div class="container-fluid" style="background-color:#FFF;max-width:1300px;">
+	<div class="row slide hero-container">
+		<div class="col-md-12">
+			
+
+<form class="form-inline search-box" action="/post/cari" method="post">
+<h3 style="color:#096385"><img src="Regenerasi%20Buku_files/icon_buy.png" height="34px">Temukan buku yang kamu cari di sini!</h3>
+
+				
+					<div class="form-group">
+
+						<div class="input-group">
+
+							<span class="input-group-addon">
+
+								<i class="fa fa-search"></i>
+
+							</span>
+
+							<input class="form-control" placeholder="Cari buku..." style="width:250px" name="cari[judul]" id="cari_judul" type="text">
+						</div>
+
+						<select class="form-control" placeholder="Asal Kota" name="cari[provinsi]" id="cari_provinsi">
+<option selected="selected" value="">Pilih Lokasi</option>
+<option disabled="disabled" style="background: none repeat scroll 0% 0% yellow;" value="sep1">Lokasi</option>
+<option value="non-jab">Jabodetabek</option>
+<option value="non-jak">Jakarta</option>
+<option value="non-bog">Bogor</option>
+<option value="non-tan">Tangerang</option>
+<option value="non-bek">Bekasi</option>
+<option value="non-ban">Bandung</option>
+<option value="non-yog">Yogyakarta</option>
+<option value="non-sur">Surabaya dan Sekitarnya</option>
+<option value="non-med">Medan dan Sekitarnya</option>
+<option disabled="disabled" style="background: none repeat scroll 0% 0% yellow;" value="sep2">Provinsi</option>
+<option value="1">Nanggroe Aceh Darusalam</option>
+<option value="2">Sumatera Utara</option>
+<option value="3">Sumatera Barat </option>
+<option value="4">Riau</option>
+<option value="5">Jambi</option>
+<option value="6">Sumatera Selatan </option>
+<option value="7">Bengkulu</option>
+<option value="8">Lampung</option>
+<option value="9">Kepulauan Bangka Belitung</option>
+<option value="10">Kepulauan Riau</option>
+<option value="11">DKI Jakarta </option>
+<option value="12">Jawa Barat</option>
+<option value="13">Jawa Tengah</option>
+<option value="14">Banten </option>
+<option value="15">Jawa Timur </option>
+<option value="16">Dl Yogyakarta </option>
+<option value="17">Bali </option>
+<option value="18">Nusa Tenggara Barat </option>
+<option value="19">Nusa Tenggara Timur </option>
+<option value="20">Kalimantan Barat </option>
+<option value="21">Kalimantan Tengah </option>
+<option value="22">Kalimantan Selatan </option>
+<option value="23">Kalimantan Timur </option>
+<option value="24">Kalimantan Utara </option>
+<option value="25">Sulawesi Utara </option>
+<option value="26">Sulawesi Tengah </option>
+<option value="27">Sulawesi Selatan </option>
+<option value="28">Sulawesi Tenggara </option>
+<option value="29">Gorontalo </option>
+<option value="30">Sulawesi Barat </option>
+<option value="31">Maluku </option>
+<option value="32">Maluku Utara </option>
+<option value="33">Papua</option>
+<option value="34">Papua Barat </option>
+</select>
+						<select class="form-control" placeholder="Kategori" name="cari[kategori]" id="cari_kategori">
+<option selected="selected" value="">Pilih Kategori</option>
+<option value="1">BUKU AGAMA</option>
+<option value="2">BUKU ANAK</option>
+<option value="3">BUKU BAHASA</option>
+<option value="4">BUKU SEKOLAH</option>
+<option value="5">EKONOMI</option>
+<option value="6">HOBI </option>
+<option value="7">HUKUM</option>
+<option value="8">IMPORT</option>
+<option value="9">KEDOKTERAN</option>
+<option value="10">KESEHATAN</option>
+<option value="11">KESEKRETARIATAN</option>
+<option value="12">KOMPUTER</option>
+<option value="13">KOMIK</option>
+<option value="14">MAJALAH</option>
+<option value="15">MANAJEMEN DAN BISNIS</option>
+<option value="16">NOVEL</option>
+<option value="17">PETA &amp; PARIWISATA</option>
+<option value="18">PERTANIAN</option>
+<option value="19">PSIKOLOGI &amp; PENDIDIKAN KELUARGA</option>
+<option value="20">ENSIKLOPEDIA &amp; REFERENSI</option>
+<option value="21">SASTRA</option>
+<option value="22">SOSIAL POLITIK</option>
+<option value="23">TEKNIK</option>
+</select>
+						<select class="form-control" name="cari[sub_kategori]" id="cari_sub_kategori">
+<option selected="selected" value="">Pilih kategori terlebih dahulu</option>
+</select>
+						<input class="btn btn-primary search-box-btn" value="Cari" type="submit">
+
+					</div>
+
+</form>
+
+
+<script>
+
+	
+
+	var semua= document.getElementsByTagName("option");
+
+	for(var i = 0;i<semua.length;i++){ 
+
+		if(semua[i].value.indexOf("sep") > -1){
+
+			semua[i].style.background = "yellow";
+
+			semua[i].disabled = "true";
+
+		}
+
+	}
+
+</script>	
+		</div>
+	</div>
+
+	<div class="col-md-10 col-md-offset-1" style="padding:15px;min-height:600px">
+		<div class="col-md-2"><h3 style="color:#096385">Pengaturan</h3>
+			<ul class="nav nav-pills nav-stacked">
+ 				 <li role="presentation"><a href="./user/edit">Edit Profile</a></li>
+ 				 <li role="presentation"><a href="./user/changepassword">Ganti Password</a></li>
+			</ul>
+		</div>
+		<div class="col-md-10">
+			<form class="form-horizontal" enctype="multipart/form-data" id="yw0" action="/user/editprofile" method="post">										<div class="form-group">
+						<label for="oldpassword" class="col-sm-4 control-label">Password Lama</label>
+						<div class="col-sm-6">
+							<input size="30" maxlength="50" class="form-control" name="User[oldpassword]" id="oldpassword" type="text">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="newspassword" class="col-sm-4 control-label">Password Baru</label>
+						<div class="col-sm-6">
+							<input size="30" maxlength="50" class="form-control" name="User[newspassword]" id="newspassword" type="text">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="newpassword_c" class="col-sm-4 control-label">Konfirmasi Password</label>
+						<div class="col-sm-6">
+							<input size="30" maxlength="50" class="form-control" name="User[newpassword_c]" id="newpassword_c" type="text">
+						</div>
+					</div>
+				</form>
+		</div>
+	</div>
+</div>
+
+<script src="Regenerasi%20Buku_files/jquery-2.js"></script>
+<script src="Regenerasi%20Buku_files/bootstrap.js"></script>
+<script src="Regenerasi%20Buku_files/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".img-small-holder li").click(function(){
+			var imgsrc = $(this).find("img").attr("src");
+			$(".img-holder").css('background-image','url('+imgsrc+')');
+		})
+	})
+</script>	</div><!-- content -->
+</div>
+<div class="span-5 last">
+	<div id="sidebar">
+		</div><!-- sidebar -->
+</div>
+		<div class="footer">
+			<div class="social">
+				<ul>
+					<li><a href=""><i class="fa fa-fw fa-twitter"></i></a></li>
+					<li><a href=""><i class="fa fa-fw fa-facebook"></i></a></li>
+					<li><a href=""><i class="fa fa-fw fa-youtube"></i></a></li>
+					<li><a href=""><i class="fa fa-fw fa-instagram"></i></a></li>
+					<li><a href=""><i class="fa fa-fw fa-google-plus"></i></a></li>
+				</ul>
+			</div>
+			<div class="partner">
+				<img src="Regenerasi%20Buku_files/logo_footer.png" height="100"><br>
+					<img src="Regenerasi%20Buku_files/60x60.gif" width="60">
+					<img src="Regenerasi%20Buku_files/60x60.gif" width="60">
+					<img src="Regenerasi%20Buku_files/60x60.gif" width="60">
+					<img src="Regenerasi%20Buku_files/60x60.gif" width="60">
+					<img src="Regenerasi%20Buku_files/60x60.gif" width="60">
+					<img src="Regenerasi%20Buku_files/60x60.gif" width="60">
+			</div>
+			<div class="footer-bottom">
+				<a href="">Jual beli aman</a> | <a href="">Syarat dan Ketentuan</a>  | <a href="">Hubungi Kami</a> 
+			</div>
+		</div>
+	
+
+	<script src="Regenerasi%20Buku_files/jquery-2.js"></script>
+	<script src="Regenerasi%20Buku_files/bootstrap.js"></script>
+	<script src="Regenerasi%20Buku_files/script.js"></script>
+	<script src="Regenerasi%20Buku_files/validator.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('body').on('change','#cari_kategori',function(){jQuery.ajax({'type':'POST','url':'/post/DynamicCategories','cache':false,'data':jQuery(this).parents("form").serialize(),'success':function(html){jQuery("#cari_sub_kategori").html(html)}});return false;});
+});
+/*]]>*/
+</script>
+
+
+</body></html>

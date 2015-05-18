@@ -36,13 +36,38 @@ class UserController extends Controller
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('editprofile','profile'),
+				'actions'=>array('editprofile','profile','ubahPassword'),
 				'roles'=>array('user','admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	public function actionUbahpassword(){
+		$model=$this->loadModel(Yii::app()->session['id']);
+		$model->setScenario('ubahpassword');
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			$valid = $model->validate();
+			if ($valid) {
+				$model->password = md5($model->new_password.'86mU_&6@GCtMwY*PdpLNDW^jRZV@73Ac');
+				if($model->save()){
+					Yii::app()->user->setFlash('ubahpassword','Password sukses diganti.');
+					$this->redirect(array('ubahPassword'));
+				}
+				else{
+					Yii::app()->user->setFlash('gagalubahpassword','Password gagal diganti. Mohon hubungi pihak admin.');
+					$this->redirect(array('ubahPassword','msg'=> 'Password gagal diganti. Mohon hubungi pihak admin.'));
+				}
+			}
+			
+		}
+
+		$this->render('ubahPassword',array('model'=>$model));
 	}
 
 	public function actionVerifikasi(){
