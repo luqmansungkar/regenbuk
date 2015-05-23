@@ -32,7 +32,7 @@ class PostController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('buat','ubah'),
+				'actions'=>array('buat','Ubah'),
 				'roles'=>array('user','admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -50,6 +50,7 @@ class PostController extends Controller
 		if(isset($_POST['ubah']))
 		{
 			$data = $_POST['ubah'];
+			//print_r($data);
 			$model=$this->loadModel($data['id']);
 			if ($data['status'] != 'remove') {
 				$model->status = $data['status'];
@@ -64,17 +65,25 @@ class PostController extends Controller
 	}
 
 	public function actionCari(){
-		$cari=$_POST['cari'];
-		//print_r($cari);
-		$kondisi = "";
+		$cari=$_GET['cari'];
 		$criteria = new CDbCriteria();
+		//print_r($cari);
+		if ($cari['judul'] == '' && $cari['provinsi'] == '' && $cari['kategori'] == '') {
+			//echo "masuk";
+		}
+		else{
+		$kondisi = "";
+		
 		if ($cari['judul'] == '') {
 			//$kondisi = "(";
 		}else{
-			$kondisi = "judul like '%".$cari['judul']."%' and ";
+			$kondisi = "judul like '%".$cari['judul']."%'";
 		}
 
 		if ($cari['provinsi'] != '') {
+			if ($cari['judul'] != '') {
+				$kondisi .= "and ";
+			}
 			$kondisi .= "(";
 			if (strpos($cari['provinsi'], 'non') !== FALSE) {
 				$lokasi = explode("-", $cari['provinsi'])[1];
@@ -114,19 +123,51 @@ class PostController extends Controller
 			}else{
 				$kondisi .= "provinsi=".$cari['provinsi'];
 			}
-			$kondisi .= ") and ";
+			$kondisi .= ")";
+		}
+		if ($cari['kategori'] != '') {
+			if ($cari['provinsi'] != '') {
+				$kondisi .= "and ";
+			}
+			$kondisi .= "kategori=:kategori";
+			if ($cari['sub_kategori'] != '') {
+				$kondisi .= " and sub_kategori=:sub_kategori";
+			}
+			
 		}
 
-		$kondisi .= "kategori=:kategori and sub_kategori=:sub_kategori";
+		
 		//echo $kondisi;
 		$criteria->condition = $kondisi;
-		$criteria->params = array(':kategori'=>$cari['kategori'], ':sub_kategori'=>$cari['sub_kategori']);
+		if ($cari['kategori'] != '') {
+			if ($cari['sub_kategori'] != '') {
+				$criteria->params = array(':kategori'=>$cari['kategori'], ':sub_kategori'=>$cari['sub_kategori']);
+			}else{
+				$criteria->params = array(':kategori'=>$cari['kategori']);
+			}
+			$cari['kategori'] = Kategori::model()->findByPk($cari['kategori'])->nama;
+		}
+		//print_r($criteria);
+		
+		
+	}
+		$item_count = Post::model()->count($criteria);
+		$pages = new CPagination($item_count);
+		$pages->setPageSize(Yii::app()->params['listPerPage']);
+		$pages->applyLimit($criteria);
+
 		$hasil = Post::model()->findAll($criteria);
-		$cari['kategori'] = Kategori::model()->findByPk($cari['kategori'])->nama;
-		$sesuatu = Post::model()->findAll();
+		
 		//print_r($sesuatu);
 		//print_r($hasil);
-		$this->render('cari',array('model'=>$hasil, 'cari'=>$cari));
+		$this->render('cari',array(
+			'model'=>$hasil, 
+			'cari'=>$cari,
+			'item_count'=>$item_count,
+			'page_size'=>Yii::app()->params['listPerPage'],
+			'items_count'=>$item_count,
+			'pages'=>$pages)
+		);
 	}
 
 	/**

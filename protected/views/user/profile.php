@@ -119,7 +119,7 @@
 
 									<option value='1'>Ada</option>
 
-									<option value='2'>Tidak Ada</option>
+									<option value='2'>Terjual</option>
 
 									<option value='remove'>Hapus</option>
 
@@ -181,21 +181,23 @@
 
 						<div class="col-md-9">
 
-							<a href="'.Yii::app()->request->baseUrl.'/post/'.$temp->id.'"><h5><strong>'.$temp->judul.' | '.$kategori.' | '.$subKategori.' | '.$provinsi.', '.$kota.'</strong></h5></a>
+							<a href="'.Yii::app()->request->baseUrl.'/post/'.$temp->id.'"><h5><strong>'.$temp->judul.'</strong></h5></a>
 
-							<p> '.$temp->konten.'</p>
+							<p> '.$temp->konten.'<br>
+							'.$kota.', '.$provinsi.'<br>
+							Kategori : '.$kategori.', sub kategori : '.$subKategori.'</p>
 
 						</div>
 
 						<div class="col-md-2" style="text-align:center">';
 
-					echo ($model->id != Yii::app()->session['id']) ? '' : '<button type="button" class="btn btn-xs btn-danger btn-primary" data-toggle="modal" data-target="#advertiseModal" data-bookTitle="Sejarah Indonesia" data-bookid="'.$temp->id.'">Edit Iklan</button> ';
-					echo ($model->id != Yii::app()->session['id']) ? '' : '<button type="button" class="btn btn-xs btn-danger btn-primary" data-bookid="'.$temp->id.'">X</button>';
+					echo ($model->id != Yii::app()->session['id']) ? '' : '<a class="btn btn-xs btn-danger btn-primary openModal" data-toggle="modal" href="#advertiseModal" data-bookTitle="'.$temp->judul.'" data-bookid="'.$temp->id.'">Edit Iklan</a> ';
+					/*echo ($model->id != Yii::app()->session['id']) ? '' : '<button type="button" class="btn btn-xs btn-danger btn-primary" data-bookid="'.$temp->id.'">X</button>';*/
 					
 
 					echo '<div><strong>Status</strong></div>
 
-							<div>'.(($temp->status == 1) ? 'Ada' : 'Tidak Ada').'</div>
+							<div>'.(($temp->status == 1) ? 'Ada' : 'Terjual').'</div>
 
 							<h5><strong>Harga</strong></h5>
 
@@ -269,31 +271,29 @@
 
 
 
-	$('[data-toggle="popover"]').popover({
+/*	$('[data-toggle="popover"]').popover({
 
 		'trigger': 'click',
 
 		'placement': 'left',
 
 		'html' : true, });
+*/
+	$(document).on("click", ".openModal", function () {
 
+	  //var button = $(event.relatedTarget); // Button that triggered the modal
 
+	  var bookTitle = $(this).data('booktitle'); // Extract info from data-* attributes
 
-	$('#advertiseModal').on('show.bs.modal', function (event) {
-
-	  var button = $(event.relatedTarget); // Button that triggered the modal
-
-	  var bookTitle = button.data('booktitle'); // Extract info from data-* attributes
-
-	  var bookid = button.data('bookid'); // Extract info from data-* attributes
+	  var bookid = $(this).data('bookid'); // Extract info from data-* attributes
 
 	  
-
-	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  console.log(bookTitle+", "+bookid);
+	  	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
 
 	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
 
-	  var modal = $(this);
+	  var modal = $(".modal-body");
 
 	  modal.find('.modal-bookname').text(bookTitle);
 

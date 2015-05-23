@@ -2,7 +2,7 @@
 
 <?php 
 
-	echo CHtml::beginForm(array('post/cari'),'post',array('class'=>'form-inline search-box'));
+	echo CHtml::beginForm(array('post/cari'),'get',array('class'=>'form-inline search-box'));
 
 ?>
 

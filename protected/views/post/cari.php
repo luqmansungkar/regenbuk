@@ -21,8 +21,8 @@
 			<div class="row">
 
 				<div class="col-md-3" style="text-align:center">
-					<h3 style="margin:0">Ekonomi</h3>
-					<div class="row" style="text-align:center"><span style=";color:#FDC142;font-size:28px"><?php echo $cari['kategori']; ?></span> <img src="http://placehold.it/80x80"></div>
+					<h3 style="margin:0"><?php echo $cari['kategori']; ?></h3>
+					<div class="row" style="text-align:center"><img src="http://placehold.it/80x80"></div>
 				</div>
 				<div class="col-md-9">
 					<div class="col-md-12">Sub-Kategori</div>
@@ -109,9 +109,11 @@
 
 						<div class="col-md-9">
 
-							<a href="'.Yii::app()->request->baseUrl.'/post/'.$data->id.'"><h5><strong> '.$data->judul.' | '.$kategori.' | '.$subKategori.' | '.$provinsi.', '.$kota.'</strong></h5></a>
+							<a href="'.Yii::app()->request->baseUrl.'/post/'.$data->id.'"><h5><strong> '.$data->judul.'</strong></h5></a>
 
-							<p>'.$data->konten.'</p>
+							<p> '.$data->konten.'<br>
+							'.$kota.', '.$provinsi.'<br>
+							Kategori : '.$kategori.', sub kategori : '.$subKategori.'</p>
 
 						</div>
 
@@ -119,7 +121,7 @@
 
 							<div><strong>Status</strong></div>
 
-							<div>'.(($data->status == 1) ? 'Ada' : 'Tidak Ada').'</div>
+							<div>'.(($data->status == 1) ? 'Ada' : 'Terjual').'</div>
 
 							<h5><strong>Harga</strong></h5>
 
@@ -142,8 +144,15 @@
 		</div>
 
 		<nav style="text-align:center">
-
-			<ul class="pagination">
+			<?php $this->widget('CLinkPager',array(
+				'currentPage'=>$pages->getCurrentPage(),
+				'itemCount'=>$item_count,
+				'pageSize'=>$page_size,
+				'maxButtonCount'=>5,
+				'htmlOptions'=>array('class'=>'pagination'),
+				'header'=>'',
+			)); ?>
+			<!-- <ul class="pagination">
 
 				<li>
 
@@ -175,7 +184,7 @@
 
 				</li>
 
-			</ul>
+			</ul> -->
 
 		</nav>
 
