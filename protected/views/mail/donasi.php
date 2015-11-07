@@ -10,7 +10,7 @@
 </head>
 <body style="width:816px;margin:0;padding:0">
 
-	<img src="regenerasibuku.com/img/email/header.jpg" />
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/email/header.png" />
 	<div class="txtholder">
 		<h2>Kode Pengiriman Buku</h2>
 		<table>
@@ -81,7 +81,7 @@
 		<hr />
 	</div>
 
-	<img src="regenerasibuku.com/img/email/middle.jpg" style="border: 0; display: block; line-height: 0px">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/email/middle.png" style="border: 0; display: block; line-height: 0px">
 	<div class="txtholder">
 
 		<h2>Profile</h2>
@@ -121,6 +121,6 @@
 		<h2>Foto Bukti Kegiatan:</h2>
 		<img src="http://lorempixel.com/400/200/people">
 	</div>
-	<img src="regenerasibuku.com/img/email/footer.jpg" style="border: 0; display: block; line-height: 0px">
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/email/footer.png" style="border: 0; display: block; line-height: 0px">
 </body>
 </html>

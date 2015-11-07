@@ -22,7 +22,8 @@ body{
 
 	font-size: 11px;
 
-	color: #fff;
+	/*color: #fff;*/
+	color: #3075AF;
 
 }
 
@@ -32,7 +33,7 @@ body{
 
 .footer{
 
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 
 }
 
@@ -46,7 +47,8 @@ body{
 
 	text-align: center;
 
-	background-color: #0974A0;
+	/*background-color: #0974A0;*/
+	background-color: #FFA31E;
 
 	margin: 0;
 
@@ -76,7 +78,8 @@ body{
 
 	padding: 10px;
 
-	background-color: #01A0C7
+	/*background-color: #01A0C7*/
+	background-color: #FBBE47;
 
 }
 
@@ -92,27 +95,29 @@ body{
 
 	padding: 0 0 15px;
 
-	background-color: #4E3C7A
+	/*background-color: #4E3C7A*/
+	background-color: #55AE78;
 
 }
 
 .footer-bottom{
 
-	box-shadow: 0px 15px 0 0 rgba(2,10,95,0.5) inset;
+	/*box-shadow: 0px 15px 0 0 rgba(2,10,95,0.5) inset;*/
 
 	/*height:100px;*/
 
-	background-image: url(../img/bgheader.png);
+	/*background-image: url(../img/bgheader.png);*/
 
 	background-size: cover;
 
 	padding: 50px;
 	text-align: center;
-	color: #fff !important;
+	color: #3075AF !important;
 
 }
 .footer-bottom a {
-	color: #fff;
+	/*color: #3075AF;*/
+	color: #FFFFFF;
 }
 
 
@@ -239,15 +244,15 @@ Home
 
 /*Register Donate Container*/
 .register-donate-container{
-	background-image: url("../img/layout.png");
-	background-size: cover;
-
+	/*background-image: url("../img/layout.png");*/
+	/*background-size: cover;*/
+	background-color: #66C38A;
 }
 .register-donate-container > .menu{
 
 	height: 150px;
 
-	padding: 20px;
+	/*padding: 20px;*/
 
 	color: #fff;
 
@@ -316,8 +321,8 @@ Home
 
 .news-container{
 
-	background-color: #00A8B3;
-
+	/*background-color: #00A8B3;*/
+	background-color: #4EB6CF;
 	padding: 20px;
 
 	color:#00354A;
@@ -450,7 +455,7 @@ Profile
 
 .basic-info-container{
 
-	background-color: #096385;
+	background-color: #03476A;
 
 	padding: 20px;
 
@@ -466,7 +471,8 @@ Profile
 
 .profile-header{
 
-	background-image: url("http://lorempixel.com/1600/400/sports");
+	background-image: url("../img/cover_profile.jpg");
+	background-size: contain;
 
 	padding: 20px;
 
@@ -805,4 +811,76 @@ ul.itemsby-menu{
 
 	cursor: default;
 
+}
+
+.row-benefit{
+	height: 200px;
+}
+
+.outer-row-benefit{
+	padding: 1px !important;
+}
+
+.icon-value{
+	max-height: 150px;
+	display: block;
+	margin: auto;
+}
+.value-text{
+	color: white;
+	text-align: center;
+	margin-top: -20px;
+	padding: 0px 20px 0px;
+	font-size: 120%;
+}
+
+.register-donasi{
+	margin-top: 25px;
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #080808 \9;
+}
+
+.btn-flat {
+    filter:progid:DXImageTransform.Microsoft.Gradient(enabled='false');
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-image:none;
+    border:0;
+    background-color: #FFFFFF;
+    color: #66C38A;
+}
+
+.btn-flat:hover{
+	background-color: #D2CDCD;
+	color: #FFFFFF;
+}
+
+.login-orange{
+	background-color: #FFA31E;
+}
+
+@media (max-width: 767px) {
+    .value-text{
+    	font-size: 65%;
+    	margin-top: 1px;
+    }
+    .register-donasi-text{
+    	font-size: 100%;
+    }
+    .icon-value.regdon{
+    	margin-top: 35px;
+    }
+}
+
+@media (max-width: @screen-sm) {
+	.value-text{
+    	font-size: 70%;
+    }
+    .register-donasi-text{
+    	font-size: 100%;
+    }
 }

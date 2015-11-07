@@ -194,9 +194,9 @@
 						</div>
 
 						<div class="form-group">
-							<input type="checkbox" name="vehicle" value="Bike"> Saya telah membaca dan menerima <a href="/terms">persyaratan dan ketentuan</a> Regenerasi Buku.com<br>
+							<input type="checkbox" name="vehicle" value="Bike" required> Saya telah membaca dan menerima <a href="http://skebpolicy.strikingly.com">persyaratan dan ketentuan</a> Skebbook<br>
 
-							<div class="col-sm-offset-2 col-sm-10" style="margin-top:20px">
+							<div class="col-sm-offset-2 col-sm-12" style="margin-top:20px;margin-left:auto;margin-right:auto">
 
 								<button type="submit" class="btn btn-primary btn-lg">Pasang</button>
 

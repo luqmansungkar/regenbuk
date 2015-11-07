@@ -11,73 +11,41 @@
 	</div>
 
 
-
+	
 
 
 	<div class="row slide category-box">
 
-		<div class="row boxes">
+		<div class="row">
 
 			<div class="row">
 
-				<div class="col-md-3" style="text-align:center">
-					<h3 style="margin:0"><?php echo $cari['kategori']; ?></h3>
-					<div class="row" style="text-align:center"><img src="http://placehold.it/80x80"></div>
-				</div>
-				<div class="col-md-9">
-					<div class="col-md-12">Sub-Kategori</div>
-					<div class="col-md-6 sub-category">
-
-						<ul style="padding:0">
-
-							<li><a href="">Akuntansi dan Audition</a></li>
-
-							<li><a href="">Ekonomi Mikro</a></li>
-
-							<li><a href="">Moneter</a></li>
-
-							<li><a href="">Sosial Ekonomi</a></li>
-
-						</ul>
-
+				<div class="col-md-3" style="margin-left:50px; text-align:center">
+					<div class="boxes">
+						<h4 style="margin:0; margin-bottom:10px;"><?php echo $cari['kategori']; ?></h4>
+						<div class="row" style="text-align:center; margin-bottom:50px;"><img height="80px" src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon disamping iklan.png"></div>
 					</div>
-
-					<div class="col-md-6 sub-category">
-
-						<ul style="padding:0">
-
-							<li><a href="">Ekonomi Makro</a></li>
-
-							<li><a href="">Koperasi</a></li>
-
-							<li><a href="">Perbankan</a></li>
-
-							<li><a href="">Lain-lainnya</a></li>
-
-						</ul>
-
-					</div>
+					<ul class="itemsby-menu" style="margin-top:20px;">
+						<li class="active">Semua Buku</li>
+					</ul>
 				</div>
-
-
-
+				
+				<div class="col-md-8">
+					<ul id="slippry-demo">
+						<li>
+							<a href=#><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/iklan1.png" width= 180px alt=""></a>
+						</li>
+						<li>
+							<a href=#><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/iklan2.png" width= 180px alt=""></a>
+						</li>
+						<li>
+							<a href=#><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/iklan3.png" width= 180px alt=""></a>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 		</div>
-
-		<hr />
-
-		<ul class="itemsby-menu">
-
-			<li class="active">Semua Buku</li>
-
-			<li class="">Berdasarkan Waktu</li>
-
-			<li class="">Berdasarkan Judul</li>
-
-		</ul>
-
-
 
 		<div class="row items" style="">
 
@@ -96,14 +64,20 @@
 					$provinsi = Provinsi::model()->findByPk($data->provinsi)->nama;
 
 					$kota = Kota::model()->findByPk($data->kota)->nama;
+					
+					
+				        $gambar = explode(";", $data->foto,-1);
+			
 
 					echo '
 
-					<li class="row">
+					<li class="row" style="background-color:white; padding-left:20px;">
 
 						<div class="col-md-1">
-
-							<img src="http://placehold.it/80x80">
+							
+							<img src="'.Yii::app()->request->baseUrl.'/images/post/'.$gambar[0].'" width="80px" length="80px">
+							
+			
 
 						</div>
 
@@ -111,7 +85,7 @@
 
 							<a href="'.Yii::app()->request->baseUrl.'/post/'.$data->id.'"><h5><strong> '.$data->judul.'</strong></h5></a>
 
-							<p> '.$data->konten.'<br>
+							<p>
 							'.$kota.', '.$provinsi.'<br>
 							Kategori : '.$kategori.', sub kategori : '.$subKategori.'</p>
 
@@ -193,3 +167,12 @@
 	</div>
 
 </div>
+<script>
+		$(document).ready(
+			function(){
+				$('#slippry-demo').slippry({
+					adaptiveHeight: false
+				});
+			}
+		);
+	</script>

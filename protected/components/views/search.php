@@ -6,7 +6,7 @@
 
 ?>
 
-<h3 style="color:#096385"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_buy.png" height="34px">Temukan buku yang kamu cari di sini!</h3>
+<h3 style="color:#096385">Explore all you needs here</h3>
 
 				<?php 
 

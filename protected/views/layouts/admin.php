@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Regenerasi Buku - Admin</title>
+    <title>Skebbook - Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo Yii::app()->getBaseUrl(true); ?>/admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">

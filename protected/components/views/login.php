@@ -15,12 +15,12 @@
 			<tr>
 				<td style="padding-right: 5px">
 					<?php echo $form->textField($model,'username',array(
-						'class'=>'form-control input-sm',
+						'class'=>'form-control input-sm login-orange',
 						'tabindex'=>'1')); ?>
 				</td>
 				<td style="padding-right: 5px">
 					<?php echo $form->passwordField($model,'password', array(
-						'class'=>'form-control input-sm',
+						'class'=>'form-control input-sm login-orange',
 						'tabindex'=>'2')); ?>
 				</td>
 				<td>
@@ -35,7 +35,7 @@
 				<td class="login_form_label_field">
 					<div>
 						<div class="uiInputLabel clearfix uiInputLabelLegacy">
-							<input id="persist_box" name="persistent" value="1" tabindex="3" class="" type="checkbox">
+							<input id="persist_box" name="persistent" value="1" tabindex="3" class="login-orange" type="checkbox">
 							<label for="persist_box" class="uiInputLabelLabel">Biarkan saya tetap masuk</label>
 						</div>
 						<input name="default_persistent" value="0" type="hidden">

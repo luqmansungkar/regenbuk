@@ -50,31 +50,31 @@
 
 	</div>
 
-	<div class="row slide basic-info-container" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/bgheader.png);">
+	<div class="row slide basic-info-container" style="/*background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/bgheader.png);*/">
 
 		
 
-		<div class="col-md-offset-3 col-md-3" style="text-align:left">
+		<div class="col-md-offset-2 col-md-4" style="text-align:left">
 
-			<div>Nama Lengkap: <?php echo $model->nama; ?></div>
+			<div>Nama Lengkap &nbsp;&nbsp;: <?php echo $model->nama; ?></div>
 
-			<div>Asal Provinsi: <?php echo $model->provinsi; ?></div>
+			<div>Asal Provinsi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $model->provinsi; ?></div>
 
-			<div>Asal Kota: <?php echo $model->kota; ?></div>
+			<div>Asal Kota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $model->kota; ?></div>
 
-			<div>Nomor Telepon: <?php echo $model->telepon; ?></div>
+			<div>Nomor Telepon &nbsp;&nbsp;: <?php echo $model->telepon; ?></div>
 
 		</div>
 
 		<div class="col-md-offset-1 col-md-5">
 
-			<div>Pendidikan: <?php echo $model->pendidikan; ?></div>
+			<div>Pendidikan&nbsp;&nbsp;&nbsp;: <?php echo $model->pendidikan; ?></div>
 
-			<div>Pin BB: <?php echo $model->bb; ?></div>
+			<div>Facebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $model->fb; ?></div>
 
-			<div>Facebook: <?php echo $model->fb; ?></div>
-
-			<div>Twitter: <?php echo $model->twitter; ?></div>
+			<div>Twitter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $model->twitter; ?></div>
+			
+			<div>Instagram&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $model->ig; ?></div>
 
 		</div>
 
@@ -168,6 +168,11 @@
 					$provinsi = Provinsi::model()->findByPk($temp->provinsi)->nama;
 
 					$kota = Kota::model()->findByPk($temp->kota)->nama;
+					
+					$gambar = explode(";", $temp->foto,-1);
+
+							
+			
 
 					echo '
 
@@ -175,7 +180,7 @@
 
 						<div class="col-md-1">
 
-							<img src="http://placehold.it/80x80">
+							<img src="'.Yii::app()->request->baseUrl.'/images/post/'.$gambar[0].'" width="80px" length="80px">
 
 						</div>
 
@@ -183,7 +188,7 @@
 
 							<a href="'.Yii::app()->request->baseUrl.'/post/'.$temp->id.'"><h5><strong>'.$temp->judul.'</strong></h5></a>
 
-							<p> '.$temp->konten.'<br>
+							<p>
 							'.$kota.', '.$provinsi.'<br>
 							Kategori : '.$kategori.', sub kategori : '.$subKategori.'</p>
 

@@ -28,6 +28,7 @@
 								<span>+</span>
 								<?php echo CHtml::activeFileField($model, 'foto',array('class'=>'upload')); ?>
 							</div>
+							<div>Ukuran maksimum gambar 4 MB (jpg, jpeg, png)</div>
 						</div>
 					</div>
 					<div class="form-group">

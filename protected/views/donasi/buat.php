@@ -12,11 +12,11 @@
 
 					<div class="col-md-offset-3 col-md-6">
 
-					<img src="" height="300">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/S__9838749.jpg" height="300">
 
-					<h2>Terima kasih telah berdonasi buku bekas.</h2>
+					<h2>Terima kasih telah ikut dalam gerakan berdonasi buku.</h2>
 
-					<p>Kami telah mengirimkan email kepada Anda berupa alamat lengkap tempat buku akan didonasikan serta surat pengantar untuk dapat mengirim buku.</p>
+					<p>Kami telah mengirimkan email kepada anda berupa alamat lengkap tempat buku akan didonasikan oleh anda.</p>
 
 					<img src="" height="200">
 
@@ -64,7 +64,7 @@
 
 				<div class="form-group">
 
-					<label for="destination" class="col-sm-4 control-label">untuk</label>
+					<label for="destination" class="col-sm-4 control-label">Untuk</label>
 
 					<div class="col-sm-4">
 
@@ -160,7 +160,7 @@
 
 				<div class="form-group">
 
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-sm-offset-2 col-sm-12" style="margin:0 auto;">
 
 						<button type="submit" class="btn btn-primary btn-lg">Donasikan</button>
 

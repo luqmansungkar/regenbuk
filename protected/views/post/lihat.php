@@ -16,7 +16,8 @@
 				$gambar = explode(";", $model->foto,-1);
 			?>
 				<div class="img-holder">
-					<?php echo '<img src="'.Yii::app()->request->baseUrl.'/images/post/'.$gambar[0].'" style="max-width:100%;max-height:100%" >'; ?>
+					<?php echo '<img id="huvt" src="'.Yii::app()->request->baseUrl.'/images/post/'.$gambar[0].'" style="max-width:100%;max-height:100%" >'; ?>
+				
 				</div>
 				<div class="img-small-holder">
 					<ul>
@@ -29,16 +30,16 @@
 				</div>
 				<div class="" style=" text-align:left;color:#fff;">
 					<div style="font-size:20px;font-weight:bold;background-color:#DD9606;padding:5px">Informasi dan Sinopsis Buku:</div>
-					<div style="font-size:14px;background-color:#FEC144;padding:5px;max-height:300px;overflow-y:scroll"><?php echo $model->konten; ?></div>
+					<div style="font-size:14px;background-color:white;color:black;padding:5px;max-height:300px;overflow-y:auto;border-style:solid;border-width:5px;border-color:#FEC144;"><?php echo $model->konten; ?></div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4 col-md-offset-1" style="padding:0 15px 0;">
 			<div style="background-color: #00A8B3;padding:15">
 				<br />
-				<div style="background-color:#FEC144;font-size:48px;color:#fff;text-align:center;font-weight:bold;width:110%;margin-left:-5%;"><?php echo 'Rp. ' . number_format( $model->harga, 0 , '' , '.' ) . ',-'; ?></div>
-				<div style="position:relative;height:150px;background-color: #0974A0" >
-					<div class="col-md-2">
+				<div style="background-color:#FEC144;font-size:40px;color:#fff;text-align:center;font-weight:bold;width:110%;margin-left:-5%;"><?php echo 'Rp. ' . number_format( $model->harga, 0 , '' , '.' ) . ',-'; ?></div>
+				<div style="background-color:#0974A0; height:150px;" >
+					<div class="col-md-2 col-xs-4">
 						<img src="<?php 
 						if (empty($user->foto)) {
 							echo "http://placehold.it/100x100";
@@ -47,13 +48,13 @@
 						}
 					?>" style="border-radius:50%;border: 5px solid #fff;position:absolute;bottom:-80px;left:-50px;top:10px;height:100px;width:100px">
 					</div>
-					<div class="col-md-10" style="color:#fff">
-						<h2><strong><?php echo $user->username; ?></strong>
+					<div class="col-md-10 col-xs-6" style="color:#fff">
+						<h3><strong><?php echo $user->username; ?></strong>
 						<?php if ($user->verified == 1) { ?>
-			<span class="verified fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="Verified Account"style="color: #5890FF" />
+			<span class="verified fa fa-check-circle" data-toggle="tooltip" data-placement="top" title="Verified Account" style="color:#5890FF;"></span>
 		<?php } ?>
 						
-						</h2>
+						</h3>
 						<a class="btn btn-primary" href="<?php echo Yii::app()->request->baseUrl."/user/".$user->id; ?>"><i class="fa fa-profile"></i> Kunjungi Profile</a>
 						<p>Temukan banyak koleksi buku pribadi di dalam profilenya.</p>
 					</div>
@@ -63,13 +64,13 @@
 				echo $telp[0]."-".$telp[1]."-"; ?><span id="txt-phone" data-last="<?php echo $telp[2]; ?>">XXXX</span>
 					<div class="btn btn-danger btn-sm" id="btn-show-phone">Lihat nomor telepon</div></div>
 				<hr />
-				<div style="font-size:2em;text-align:center;padding:15px;color:#fff">
+				<div style="font-size:1.3em;text-align:center;padding:15px;color:#fff">
 					<div>Kategori: <?php echo $model->kategori; ?></div>
 					<div>Sub-Kategori: <?php echo $model->sub_kategori; ?></div>
 				</div>
 				<hr />
-				<div style="font-size:2em;text-align:center;padding:15px;color:#fff">
-					<a class="btn btn-lg btn-primary" href="mailto:<?php echo $user->email; ?>">Kirim Email <i class="fa fa-paper-plane"></i></a>
+				<div style="font-size:1em;text-align:center;padding:15px;color:#fff">
+					<a class="btn btn-primary" href="mailto:<?php echo $user->email; ?>">Kirim Email <i class="fa fa-paper-plane"></i></a>
 				</div>
 			</div>
 		</div>
@@ -77,13 +78,11 @@
 </div>
 
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-2.1.3.min.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".img-small-holder li").click(function(){
 			var imgsrc = $(this).find("img").attr("src");
-			$(".img-holder").css('background-image','url('+imgsrc+')');
+			$("#huvt").attr("src", imgsrc);
 		})
 	})
 </script>

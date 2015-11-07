@@ -36,13 +36,13 @@
 
 						<div class="col-md-6">
 
-							<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/cover_register.jpg">
+							<img style="max-width:400px" src="<?php echo Yii::app()->request->baseUrl; ?>/img/cover_register.png">
 
 						</div>
 
 						<div class="col-md-6">
 
-							<h1 style="font-weight:bold;color:#F0AB18">Registrasi</h1>
+							<div style="color:#3075AF;font-size:140%;text-align: left; margin-left:10px"><h2 style="font-weight:bold;display: inline;">Sign up</h2> - it's free and simple.</div>
 
 							<?php $form=$this->beginWidget('CActiveForm', array(
 

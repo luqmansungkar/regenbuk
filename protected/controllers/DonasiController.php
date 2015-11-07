@@ -101,7 +101,7 @@ class DonasiController extends Controller
 		        $params              = array('model'=>$model,'tujuan'=>$tujuan);
 		        $message->setBody($params, 'text/html');   
 				$message->addTo($user->email);
-		        $message->from = 'admin@regenerasibuku.com';   
+		        $message->from = 'admin@skebbook.com';   
 		        Yii::app()->mail->send($message);
 
 				//$this->render('email', array('params'=>$model,'tujuan'=>$tujuan));

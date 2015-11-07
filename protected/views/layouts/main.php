@@ -8,8 +8,8 @@
 	<meta name="keywords" content="regenerasi buku, jual beli buku, beli buku online" />
 	<meta name="ROBOTS" CONTENT="INDEX, FOLLOW" />
 
-	<title>Regenerasi Buku</title>
-	<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/icon.png" type="image/x-icon" />
+	<title>Situs Jual Beli dan Berdonasi Buku</title>
+	<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/favicon.png" type="image/x-icon" />
 
 	<!-- Fonts -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
@@ -17,12 +17,16 @@
 	<!-- Default CSS -->
 	<link media="all" type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css">
 	<link media="all" type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.css">
+	
+	<link media="all" type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/slippry.css">
 	<link media="all" type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.css">
 	<link media="all" type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css">
+	
+	
 </head>
 <body>
 <!-- Docs master nav -->
-	<header class="navbar navbar-default navbar-static-top bs-docs-nav" id="top" role="banner">
+	<header class="navbar navbar-default navbar-static-top bs-docs-nav" style="background-image:none;"id="top" role="banner">
 		<div class="container-fluid" style="max-width:1200px">
 			<div class="navbar-header">
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -31,24 +35,24 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>" style="padding: 4px 15px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_header.png" height="90" alt="logo"></a>
+				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>/" style="padding: 22px 15px; width:50%;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" height="70" alt="logo"></a>
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 				<?php if (Yii::app()->session['role'] == null) { ?>			
 				<ul class="nav navbar-nav navbar-right">
-					<li class="" >
+					<!--<li class="" >
 						<a href="<?php echo Yii::app()->request->baseUrl; ?>" style="text-align:center;">
 							<div style="margin-bottom:5px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_home.png"  height="30" width="30"></div>
 							<span class="btn btn-primary btn-xs">Beranda</span>
 						</a>
-					</li>
-					<li class="" style="padding:5px 15px; background-color:rgba(77,128,132,0.5);margin-top:5px">
+					</li>-->
+					<li class="" style="padding:7px 15px;margin-top:5px">
 						<?php $this->widget('LoginWidget'); ?>
 					</li>
 					<li class="" >
 						<a href="<?php echo Yii::app()->request->baseUrl; ?>/user/register" style="text-align:center;">
-							<div style="text-align:center;margin-bottom:5px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_person.png" height="30" width="30"></div>
-							<span class="btn btn-primary btn-xs">Daftar</span>
+							<!--<div style="text-align:center;margin-bottom:5px"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon_person.png" height="30" width="30"></div>-->
+							<span class="btn btn-primary btn-xs" style="margin-top:3px; padding:7px;" >Daftar</span>
 						</a>
 					</li>
 				</ul>
@@ -90,8 +94,8 @@
 							</div>
 						</li>
 						<li>
-							<div style="padding:35px 0">
-								<div style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><strong>Hi! <?php echo Yii::app()->session['user'] ?> <span class="caret"></span></strong></div>  
+							<div style="padding:35px 0; margin-left:20px;">
+								<div style="color:#3075AF;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><strong>Hi! <?php echo Yii::app()->session['user'] ?> <span class="caret"></span></strong></div>  
 								  <ul class="dropdown-menu" role="menu" style="top:auto">
 								    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Beranda</a></li>
 								    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/editprofile">Edit Profile</a></li>
@@ -105,11 +109,12 @@
 				<?php } ?>
 			</nav>
 		</div>
+		<div style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/line.png); height:15px;background-size: contain; background-repeat: repeat-x"><!-- <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/line.png"> --></div>
 	</header>
 
 		
 		<?php echo $content; ?>
-		<div class="footer">
+		<div class="footer" style="background-color:#03476A;">
 			<div class="social">
 				<ul>
 					<li><a href=""><i class="fa fa-fw fa-twitter"></i></a></li>
@@ -120,16 +125,15 @@
 				</ul>
 			</div>
 			<div class="partner">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_footer.png" height="100"><br/>
-					<img src="http://placehold.it/60x60" width='60'>
-					<img src="http://placehold.it/60x60" width='60'>
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_footer.png" style="max-height:80px; margin:25px;"><br/>
 					<img src="http://placehold.it/60x60" width='60'>
 					<img src="http://placehold.it/60x60" width='60'>
 					<img src="http://placehold.it/60x60" width='60'>
 					<img src="http://placehold.it/60x60" width='60'>
 			</div>
+			<div style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/line.png); height:15px; background-size: contain; background-repeat: repeat-x"><!-- <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/line.png"> --></div>
 			<div class="footer-bottom">
-				<a href="">Jual beli aman</a> | <a href="">Syarat dan Ketentuan</a>  | <a href="">Hubungi Kami</a> 
+				<a href="http://skebsecure.strikingly.com">Jual beli aman</a> | <a href="http://skebpolicy.strikingly.com">Syarat dan Ketentuan</a>  | <a href="http://skebcontact.strikingly.com">Hubungi Kami</a> 
 			</div>
 		</div>
 	</div>
@@ -138,5 +142,7 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/validator.min.js"></script>
+	
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/slippry.min.js"></script>
 </body>
 </html>
